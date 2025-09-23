@@ -10,6 +10,18 @@ That is what MantraOS is. It is our attempt to raise a different kind of dragon.
 
 ---
 
+## 🐉 Our Guardian Dragon
+
+<div align="center">
+
+![Guardian Dragon](assets/logo/guardian-dragon-lineart.svg)
+
+*A gentle dragon curled protectively around a sapling — our symbol of technology that serves life, not consumes it.*
+
+</div>
+
+---
+
 ## 📚 Table of Contents
 
 - [🐉 The Story of the Two Dragons (The "Why")](#-the-story-of-the-two-dragons-the-why)  

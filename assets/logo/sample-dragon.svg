@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Circle dragon body -->
+  <circle cx="100" cy="100" r="80" stroke="#5A8C5A" stroke-width="12" fill="none" />
+  
+  <!-- Sapling inside -->
+  <line x1="100" y1="120" x2="100" y2="80" stroke="#4A6FA5" stroke-width="6" />
+  <ellipse cx="90" cy="85" rx="12" ry="6" fill="#5A8C5A" />
+  <ellipse cx="110" cy="85" rx="12" ry="6" fill="#5A8C5A" />
+  
+  <!-- Dragon head (simplified curve) -->
+  <circle cx="170" cy="100" r="15" fill="#5A8C5A" />
+</svg>
