@@ -91,14 +91,14 @@ This installs a `pre-commit` hook that runs the audit automatically before each 
 
 **Optional one-off cleanup**
 ```bash
-# If any legacy docs still mention "Bhagavad Gita", normalize them to
+# If any legacy docs still mention "Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11)", normalize them to
 # "Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11)" across text-like files:
 make purge-bhagavad
 ```
-This is a convenience wrapper around `scripts/purge-bhagavad-gita.sh`.  
+This is a convenience wrapper around `scripts/purge-Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11).sh`.  
 It is **not** part of CI and is intended for occasional maintenance only.  
 Once the cleanup has been applied and committed, please **delete the script**
-(`scripts/purge-bhagavad-gita.sh`) and remove its Makefile target.
+(`scripts/purge-Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11).sh`) and remove its Makefile target.
 
 > Our goal is kindness for future readers: consistent navigation, no dead ends, and links that work everywhere.
 

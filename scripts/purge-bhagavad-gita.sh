@@ -45,8 +45,8 @@ echo "Extensions: $EXTS"
 echo "Dry-run: $([[ "$APPLY" = "1" ]] && echo 'NO (will write)' || echo 'YES (report only)')"
 echo
 
-mapfile -t files < <(find . \( "${find_expr[@]}" \) -type f \
-  -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./dist/*" -not -path "./build/*")
+files=($(find . \( "${find_expr[@]}" \) -type f \
+  -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./dist/*" -not -path "./build/*"))
 
 if [[ ${#files[@]} -eq 0 ]]; then
   echo "${yellow}No candidate files found for extensions: $EXTS${reset}"
@@ -62,8 +62,8 @@ for f in "${files[@]}"; do
       tmp="${f}.tmp.__purge_gita"
       cp "$f" "$tmp"
       for pat in "${PATTERNS[@]}"; do
-        # GNU sed: replace case-insensitively with canonical target
-        sed -E -i"" "s/${pat}/${REPLACEMENT}/gi" "$tmp"
+        # sed: replace case-insensitively with canonical target
+        sed -E -i '' "s/${pat}/${REPLACEMENT}/gi" "$tmp"
       done
       if ! cmp -s "$f" "$tmp"; then
         mv "$tmp" "$f"
