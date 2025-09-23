@@ -36,6 +36,10 @@ export LINK_AUDIT_IGNORE="docs/legacy/.*|README-old.md"
 
 *(Please remove ignores once fixed.)*
 
+> **Update:** Scripture blocks (`> …`) and fenced code are **not** wrapped to 80 columns;
+> they are visually meaningful. Prose paragraphs should be wrapped to `≤80`
+> using `make wrap-md`.
+
 ### Context size in failures
 When the audit finds issues, it prints the **tail** of the offending file to help you fix quickly.
 You can tune how much context is shown:

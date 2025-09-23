@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
-# Fail if any non-binary tracked file has lines > 80 chars.
-# Skips code fences? No — we are checking raw width. Use wrapper to format.
-# Allows explicit ignores via env var:
+# Fail if any non-binary tracked file has lines > 80 chars,
+# with project-specific exemptions:
+#   - code fences (``` … ```)
+#   - tables (lines containing '|')
+#   - blockquotes (scriptural verse blocks starting with '>')
+#   - docs/VERSE-INDEX.md (index lines are link-dense by design)
+# Use wrapper to format prose paragraphs; keep verses intact.
+# Extra ignores via:
 #   LENGTH_IGNORE='^docs/legacy/|^assets/.*\.svg$'
 set -euo pipefail
 
@@ -25,14 +30,40 @@ list_tracked() {
 
 while read -r f; do
   [[ -f "$f" ]] || continue
+  # Whole-file exemption: verse index is link-dense by construction
+  if [[ "$f" == "docs/VERSE-INDEX.md" ]]; then
+    continue
+  fi
   if [[ -n "$LENGTH_IGNORE" ]] && echo "$f" | grep -Eq "$LENGTH_IGNORE"; then
     continue
   fi
-  # Scan file for long lines
-  # Print offending lines with number and length
-  if awk -v max="$MAX_COL" 'length($0) > max {print NR ":" length($0) ":" $0 }' "$f" | head -n 1 | grep -q ':'; then
+  # Scan for long lines, but skip:
+  #  - lines inside code fences
+  #  - table lines (contain '|')
+  #  - blockquotes (start with '>')
+  if awk -v max="$MAX_COL" '
+    BEGIN{in_code=0}
+    {
+      line=$0
+      if (match(line,/^```/)) { in_code = !in_code; print_state=0; next }
+      if (in_code) next
+      if (match(line,/^\s*>/)) next
+      if (index(line,"|")>0) next
+      if (length(line) > max) { print NR ":" length(line) ":" line }
+    }
+  ' "$f" | head -n 1 | grep -q ':'; then
     echo "${red}LINE-LENGTH > ${MAX_COL}${reset} in ${f}"
-    awk -v max="$MAX_COL" 'length($0) > max {printf("  L%05d (%d): %s\n", NR, length($0), $0)}' "$f" | head -n 5
+    awk -v max="$MAX_COL" '
+      BEGIN{in_code=0}
+      {
+        line=$0
+        if (match(line,/^```/)) { in_code = !in_code; next }
+        if (in_code) next
+        if (match(line,/^\s*>/)) next
+        if (index(line,"|")>0) next
+        if (length(line) > max) { printf("  L%05d (%d): %s\n", NR, length(line), line) }
+      }
+    ' "$f" | head -n 5
     echo "---- tail of $f ----"
     tail -n "$TAIL_LINES" "$f" || true
     echo "---------------------"
@@ -49,4 +80,4 @@ if [[ $viol -ne 0 ]]; then
   exit 1
 fi
 
-echo "✅ All checked files respect <= ${MAX_COL} columns."
+echo "✅ All checked files respect <= ${MAX_COL} columns (with verse/code/table exemptions)."

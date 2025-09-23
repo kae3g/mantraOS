@@ -7,6 +7,11 @@ This document explains the **automated checks** that run on every push and pull 
 
 We aim for **branch-agnostic links**, **seamless navigation**, and a **consistent scriptural voice** throughout the repository.
 
+> **Update:** CI now treats **scriptural blockquotes** and **code fences** as
+> **exempt** from the 80-column rule, and scopes the **relative links check**
+> to `README.md`, `001-sadhana.md`, and `030-edu/*.md`. Reference scrolls
+> (like `docs/**`) are informational and not audited for ribbons.
+
 ---
 
 ## ✅ Workflows
@@ -19,6 +24,8 @@ We aim for **branch-agnostic links**, **seamless navigation**, and a **consisten
   - No over-up relative paths (`../../something.md`)
   - Required nav ribbons in curriculum files
   - Required Quick Links in all stage scrolls (Stages 1–10)
+- **Scope:** `README.md`, `001-sadhana.md`, and every `030-edu/*.md`.
+  Reference docs under `docs/**` and `website/**` are excluded.
 - **Local run:**
   ```bash
   make links-check
@@ -49,6 +56,10 @@ We aim for **branch-agnostic links**, **seamless navigation**, and a **consisten
   - All tracked text/Markdown files keep **≤ 80 columns**
   - Wrapper safely reflows paragraphs while preserving code fences, tables,
     lists, quotes, URLs, etc.
+- **Project exemptions:** verse blockquotes (`> …`), lines inside code fences,
+  table rows (contain `|`), and `docs/VERSE-INDEX.md` as it is link-dense by
+  design. If a prose paragraph exceeds 80 chars, please wrap it using the
+  wrapper (see `make wrap-md`).
 - **Local run:**
   ```bash
   make wrap-md

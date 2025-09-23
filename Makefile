@@ -7,7 +7,7 @@
 help:
 	@echo "MantraOS Make targets:"
 	@echo "  make verse-index   - Rebuild docs/VERSE-INDEX.md from [#SB-11.*] anchors"
-	@echo "  make links-check   - Run scripts/check-relative-links.sh (nav ribbons + Quick Links + no absolute links)"
+	@echo "  make links-check   - Audit relative links/ribbons in README + sadhana + 030-edu only"
 	@echo "  make docs-check    - Run all docs checks (links-check + verse-index freshness)"
 	@echo "  make ci-all        - Run all repo docs guards locally (links, verse index, wrap checks)"
 	@echo ""
@@ -15,8 +15,8 @@ help:
 	@echo "  TAIL_LINES=40 make links-check   # increase failure context in logs"
 	@echo ""
 	@echo "80-column hard wrap:"
-	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe mode)"
-	@echo "  make check-80     - Report lines that exceed 80 chars (enforcer)"
+	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe mode, prose only)"
+	@echo "  make check-80     - Report lines >80 (verses/code/tables are exempt)"
 
 verse-index:
 	bash scripts/build-verse-index.sh
