@@ -1,8 +1,7 @@
 # 003 – How Memory Is Like a Library
 
-🔙 Return to the Dragon's Front Door: [../README.md](../README.md) 🗺️
-Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md) 📚
-Curriculum Index:
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md) 🗺️ Repository
+Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md) 📚 Curriculum Index:
 [000-curriculum.md](000-curriculum.md)
 
 

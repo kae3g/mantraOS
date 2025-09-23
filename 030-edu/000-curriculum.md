@@ -1,8 +1,7 @@
 # 000 – The Curriculum Path for mantraOS Learners
 
-🔙 Return to the Dragon's Front Door: [../README.md](../README.md) 🗺️
-Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md) 🧘
-Spiritual Practice:
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md) 🗺️ Repository
+Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md) 🧘 Spiritual Practice:
 [../001-sadhana.md](../001-sadhana.md) 📚 Curriculum Index:
 [000-curriculum.md](000-curriculum.md)
 
