@@ -1,0 +1,29 @@
+% --- Page geometry ---
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans}
+
+% --- Header & Footer ---
+\pagestyle{fancy}
+\fancyhf{} % clear
+% Left header = doc title, right header = page number
+\lhead{\small \leftmark}
+\rhead{\small Page \thepage}
+% Footer: left dragon mark (text), center dharma reminder, right repo link
+\lfoot{\small mantraOS 🐉}
+\cfoot{\small Ahimsa: do no harm}
+\rfoot{\small github.com/kae3g/mantraOS}
+
+% --- Optional faint watermark (bottom-right) ---
+\usepackage{eso-pic}
+\newcommand\BackgroundPicture{%
+  \put(460,40){% adjust position
+    \makebox(0,0){\scalebox{1.0}{\textcolor[gray]{0.92}{\Huge 🪷}}}}}
+\AddToShipoutPicture{\BackgroundPicture}
+
+% --- Blockquote formatting for verses (optional) ---
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\itshape}
