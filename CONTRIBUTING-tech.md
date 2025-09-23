@@ -89,7 +89,50 @@ This installs a `pre-commit` hook that runs the audit automatically before each 
 - From `030-edu/` to repo root, prefer `../README.md` style.
 - Avoid leading slashes and multiple `..` hops unless absolutely necessary.
 
+**Optional one-off cleanup**
+```bash
+# If any legacy docs still mention "Bhagavad Gita", normalize them to
+# "Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11)" across text-like files:
+make purge-bhagavad
+```
+This is a convenience wrapper around `scripts/purge-bhagavad-gita.sh`.  
+It is **not** part of CI and is intended for occasional maintenance only.  
+Once the cleanup has been applied and committed, please **delete the script**
+(`scripts/purge-bhagavad-gita.sh`) and remove its Makefile target.
+
 > Our goal is kindness for future readers: consistent navigation, no dead ends, and links that work everywhere.
+
+---
+
+## ✂️ 80-Column Line Wrapping (Markdown)
+
+We keep Markdown/text at **≤ 80 columns** for clean diffs and readability.
+
+**Wrap locally**
+```bash
+# Dry-run
+python3 scripts/wrap-markdown.py
+# Apply
+APPLY=1 python3 scripts/wrap-markdown.py
+
+# With Make
+make wrap-md
+```
+
+**Enforce locally**
+```bash
+make check-80
+# or
+MAX_COL=80 bash scripts/enforce-80.sh
+```
+
+**CI**
+- Workflow: `.github/workflows/line-length.yml`
+- The checker prints the tail of offending files for context.
+- Increase context:
+  `TAIL_LINES=40 make check-80`
+
+See `docs/STYLE-WRAP.md` for details and edge cases.
 
 ---
 

@@ -1,4 +1,46 @@
-# ---------- MantraOS Root Makefile (logo helpers) ----------
+# MantraOS Developer Convenience Targets
+# --------------------------------------
+# These are wrappers around our scripts so contributors can remember fewer commands.
+
+.PHONY: help verse-index links-check docs-check ci-all wrap-md check-80 purge-bhagavad
+
+help:
+	@echo "MantraOS Make targets:"
+	@echo "  make verse-index   - Rebuild docs/VERSE-INDEX.md from [#SB-11.*] anchors"
+	@echo "  make links-check   - Run scripts/check-relative-links.sh (nav ribbons + Quick Links + no absolute links)"
+	@echo "  make docs-check    - Run all docs checks (links-check + verse-index freshness)"
+	@echo "  make ci-all        - Run all repo docs guards locally (links, verse index, wrap checks)"
+	@echo ""
+	@echo "Tips:"
+	@echo "  TAIL_LINES=40 make links-check   # increase failure context in logs"
+	@echo ""
+	@echo "80-column hard wrap:"
+	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe mode)"
+	@echo "  make check-80     - Report lines that exceed 80 chars (enforcer)"
+	@echo "  make purge-bhagavad - One-off cleanup: replace any lingering 'Bhagavad Gita' mentions"
+
+verse-index:
+	bash scripts/build-verse-index.sh
+
+links-check:
+	bash scripts/check-relative-links.sh
+
+docs-check: links-check verse-index
+	@git diff --quiet -- docs/VERSE-INDEX.md || (echo >&2 "docs/VERSE-INDEX.md changed, please commit."; exit 1)
+
+ci-all: links-check verse-index
+	@echo "All docs checks completed (links + verse index)."
+
+wrap-md:
+	python3 scripts/wrap-markdown.py
+
+check-80:
+	bash scripts/enforce-80.sh
+
+purge-bhagavad:
+	APPLY=1 bash scripts/purge-bhagavad-gita.sh
+
+# ---------- Logo helpers ----------
 
 LOGO_TOOLS := assets/logo/tools/logo-pipeline.sh
 
