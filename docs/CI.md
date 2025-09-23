@@ -58,10 +58,16 @@ Reference docs under `docs/**` and `website/**` are excluded.
   - **Blockquotes/verses must wrap** like other prose
 - **Local run:**
   ```bash
-  make wrap-md
+  make wrap-auto   # md/sh/yaml/json auto-fix
+  make wrap-md     # md-only (if you prefer)
   make check-80
   make list-long
   ```
+
+If after wrap-auto you still see offenders, they are likely:
+- JSON files with single ultra-long string literals (unbreakable without
+- semantics changes), or source files in languages we don't auto-edit. Edit
+- those lines by hand.
 
 ---
 

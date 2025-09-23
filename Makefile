@@ -16,6 +16,7 @@ help:
 	@echo ""
 	@echo "80-column hard wrap:"
 	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe mode, prose only)"
+	@echo "  make wrap-auto    - Smart auto-fix (md/sh/yaml/json); others are reported only"
 	@echo "  make check-80     - Report lines >80 (verses/code/tables are exempt)"
 	@echo "  make list-long    - Print top offenders (files/lines >80) to fix fast"
 
@@ -33,6 +34,9 @@ ci-all: links-check verse-index
 
 wrap-md:
 	python3 scripts/wrap-markdown.py
+
+wrap-auto:
+	APPLY=1 python3 scripts/wrap-anytext.py
 
 check-80:
 	bash scripts/enforce-80.sh

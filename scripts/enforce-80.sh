@@ -62,9 +62,11 @@ while read -r f; do
       ;;
     *)
       # Non-Markdown: check raw lines (no exemptions)
-      if awk -v max="$MAX_COL" 'length($0) > max {print NR ":" length($0) ":" $0 }' "$f" | head -n 1 | grep -q ':'; then
+      if awk -v max="$MAX_COL" 'length($0) > max {print NR ":" length($0) ":" $0 }' "$f" \
+      | head -n 1 | grep -q ':'; then
         echo "${red}LINE-LENGTH > ${MAX_COL}${reset} in ${f}"
-        awk -v max="$MAX_COL" 'length($0) > max {printf("  L%05d (%d): %s\n", NR, length($0), $0)}' "$f" | head -n 10
+        awk -v max="$MAX_COL" 'length($0) > max {printf("  L%05d (%d): %s\n", NR, length($0), $0)}' "$f" \
+        | head -n 10
         echo "---- tail of $f ----"
         tail -n "$TAIL_LINES" "$f" || true
         echo "---------------------"

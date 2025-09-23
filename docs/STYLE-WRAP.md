@@ -12,11 +12,11 @@ clarity, and accessibility in narrow viewports.
 
 The wrapper keeps these structures intact and unbroken:
 
-- **Code fences** (```), and **indented code blocks**
-- **Tables** (lines containing `|`) and table dividers
-- **Headings** (`#`), **horizontal rules** (`---`, `***`, etc.) **Blockquotes**
-- (`> `) — including nested ones **Bulleted/numbered lists** with correct
-- indentation **Raw URLs** (will not be split) Basic **HTML blocks**
+- **Code fences** (```), and **indented code blocks** **Tables** (lines
+- containing `|`) and table dividers **Headings** (`#`), **horizontal rules**
+- (`---`, `***`, etc.) **Blockquotes** (`> `) — including nested ones
+- **Bulleted/numbered lists** with correct indentation **Raw URLs** (will not be
+- split) Basic **HTML blocks**
 
 It only reflows **paragraph text**.
 

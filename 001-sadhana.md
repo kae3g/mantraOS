@@ -1,7 +1,6 @@
 # 001 – Sādhana (साधन)
 
-🔙 Return to the Dragon's Front Door: [README.md](README.md) 🗺️
-Repository Map
+🔙 Return to the Dragon's Front Door: [README.md](README.md) 🗺️ Repository Map
 (lantern scroll): [REPOSITORY.md](REPOSITORY.md) 📚 Curriculum Index:
 [030-edu/000-curriculum.md](030-edu/000-curriculum.md)
 

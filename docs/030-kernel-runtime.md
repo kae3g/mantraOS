@@ -32,10 +32,9 @@ Each process starts with **zero** access except:
 
 ### Capability Kinds
 - `cap.fs.read(path-pattern)` – read-only subtree. `cap.fs.write(path-pattern)`
-- – write-only or read/write subtree.
-- `cap.net.send(domain|ip|iface)` – scoped egress.
-- `cap.net.listen(port|iface)` – limited ingress.
-- `cap.hw.sensor(kind, rate, privacy_budget)` – e.g., `accelerometer, 1 Hz, 5
+- – write-only or read/write subtree. `cap.net.send(domain|ip|iface)` – scoped
+- egress. `cap.net.listen(port|iface)` – limited ingress. `cap.hw.sensor(kind,
+- rate, privacy_budget)` – e.g., `accelerometer, 1 Hz, 5
 min/day`.
 - `cap.ui.display(region)` – draw region on e-ink via display server.
 - `cap.power.duty(duty-name)` – permission to request specific power modes.

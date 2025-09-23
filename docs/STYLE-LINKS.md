@@ -49,6 +49,14 @@ TAIL_LINES=40 bash scripts/check-relative-links.sh
 ```
 Default is 20 lines.
 
+### Auto-fix helper
+Use the smart wrapper for common types:
+```bash
+make wrap-auto     # md/sh/yaml/json
+make list-long     # then fix any remaining offenders by hand
+make check-80
+```
+
 ### Line length helpers
 - `make list-long` - Print top offenders (files/lines >80) to fix fast Use `vim
 - +{line} {file}` to open specific lines for editing

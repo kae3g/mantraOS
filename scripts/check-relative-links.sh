@@ -18,7 +18,8 @@ fail=0
 FILES=()
 while IFS= read -r p; do
   FILES+=("$p")
-done < <(git ls-files | grep -E '^(README\.md|001-sadhana\.md|030-edu/.*\.md)$' | grep -Ev '^\.(git|github)/')
+done < <(git ls-files | grep -E '^(README\.md|001-sadhana\.md|030-edu/.*\.md)$' \
+| grep -Ev '^\.(git|github)/')
 
 # 1) Disallow absolute-root markdown links ](/foo.md) in target files only
 abs_hits=0
