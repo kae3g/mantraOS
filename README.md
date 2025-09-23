@@ -9,6 +9,14 @@ But what if we could teach this dragon a new way? A gentler way? What if its fir
 That is what MantraOS is. It is our attempt to raise a different kind of dragon. A dragon that remembers it is part of the forest, not its master.
 
 ---
+### 📖 A Classroom Invitation
+
+Dear reader—whether you are a parent guiding little ones, a student learning step by step,
+or an advanced developer seeking the deeper kernel and network details—you are warmly invited
+to begin the **MantraOS Learning Path Curriculum** here:  
+[→ Curriculum Guide](030-edu/000-curriculum.md)
+
+---
 
 ## 🐉 Our Guardian Dragon
 
@@ -113,13 +121,13 @@ We walk gently, with patience.
 
 ## 📂 Repository Scrolls
 
-- `/philosophy` – [002-sadhana.md](002-sadhana.md) — why the dragon matters.  
-- `/design` – specifications, diagrams, kernel/runtime plans.  
-- `/hardware` – BOMs, modular diagrams, test plans.  
-- `/software` – Guardian Services, firmware in Rust.  
-- `/030-edu/worksheets` – lessons & workbook.  
-- `/030-edu/coloring-book` – coloring prompts & companion guide.  
-- `/030-edu/print-kit` – templates, PDF export, Docker + Makefile.  
+- [philosophy](philosophy) – [001-sadhana.md](001-sadhana.md) — why the dragon matters.  
+- [design](design) – specifications, diagrams, kernel/runtime plans.  
+- [hardware](hardware) – BOMs, modular diagrams, test plans.  
+- [software](software) – Guardian Services, firmware in Rust.  
+- [030-edu/worksheets](030-edu/worksheets) – lessons & workbook.  
+- [030-edu/coloring-book](030-edu/coloring-book) – coloring prompts & companion guide.  
+- [030-edu/print-kit](030-edu/print-kit) – templates, PDF export, Docker + Makefile.  
 
 ---
 

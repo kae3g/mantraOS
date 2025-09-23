@@ -54,3 +54,9 @@ So too with your file system: organize with care, and it will always give back p
 > "Knowledge, steadiness, wisdom, courage, strength, memory, truthfulness, and control of the mind and senses—these are the signs of perfection."  
 
 Your files are fruits of your labor. Tend your garden well.
+
+---
+### Next → Networks Rivers 🌊
+**Read:** 006-networks-rivers → [006-networks-rivers.md](006-networks-rivers.md)
+
+> From gardens to rivers — how the Guardian Dragon flows.

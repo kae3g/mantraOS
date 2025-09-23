@@ -7,19 +7,19 @@ For a general community welcome, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 📂 Areas of Contribution
 
-1. **Philosophy / Docs** → `/philosophy`, `sadhana.md`  
+1. **Philosophy / Docs** → [philosophy](philosophy), [001-sadhana.md](001-sadhana.md)  
    Shape metaphors, glossary entries, and stories.
 
-2. **Design** → `/design`  
+2. **Design** → [design](design)  
    System design, UI, accessibility studies.
 
-3. **Hardware** → `/hardware`  
+3. **Hardware** → [hardware](hardware)  
    Board layouts, BOMs, sustainable materials.
 
-4. **Firmware / Kernel** → `/firmware`  
+4. **Firmware / Kernel** → [firmware](firmware)  
    Rust microkernel code, IPC, runtime sketches.
 
-5. **Logo & Mascot Assets** → `/assets/logo`  
+5. **Logo & Mascot Assets** → [assets/logo](assets/logo)  
    Mascot prompts, vectorizations, and validator tools.  
    See section below.
 
@@ -27,7 +27,7 @@ For a general community welcome, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 🖼️ Asset Contributions (Mascot/Logo)
 
-Detailed in [`assets/logo/CONTRIBUTING-assets.md`](./assets/logo/CONTRIBUTING-assets.md).
+Detailed in [assets/logo/CONTRIBUTING-assets.md](assets/logo/CONTRIBUTING-assets.md).
 
 Quick summary:
 

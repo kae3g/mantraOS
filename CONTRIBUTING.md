@@ -21,7 +21,7 @@ Whether you are a child, a parent, a teacher, a seeker, an artist, or a develope
 ### 3. Art & Design
 - Sketch dragons, saplings, or dream villages.  
 - Experiment with colors, symbols, or ornaments.  
-- See: [`assets/logo/CONTRIBUTING-assets.md`](./assets/logo/CONTRIBUTING-assets.md) for mascot/logo art contributions.
+- See: [assets/logo/CONTRIBUTING-assets.md](assets/logo/CONTRIBUTING-assets.md) for mascot/logo art contributions.
 
 ### 4. Community & Support
 - Share feedback about the vision.  
@@ -30,7 +30,7 @@ Whether you are a child, a parent, a teacher, a seeker, an artist, or a develope
 
 ### 5. Technical Contributions
 - Developers, designers, and engineers should see:  
-  [**CONTRIBUTING-tech.md**](./CONTRIBUTING-tech.md)
+  [CONTRIBUTING-tech.md](CONTRIBUTING-tech.md)
 
 ---
 

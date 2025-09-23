@@ -63,3 +63,9 @@ Respect the library, and it will always offer knowledge in peace.
 > "Knowledge, steadiness, wisdom, courage, strength, memory, truthfulness, and control of the mind and senses—these are the signs of perfection."  
 
 Memory holds both what we know and what we forget. Together, they make learning possible.
+
+---
+### Next → Processes Orchestra 🎻
+**Read:** 004-processes-orchestra → [004-processes-orchestra.md](004-processes-orchestra.md)
+
+> From memory to music — how the Guardian Dragon conducts.

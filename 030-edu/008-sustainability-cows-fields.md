@@ -53,3 +53,9 @@ Every field is like the Earth. Will you nourish it or exhaust it?
 > "Truthfulness, compassion, austerity, purity, tolerance, control of the senses, peacefulness, tolerance of dualities, knowledge, and detachment—all shelter in self-control."  
 
 So too with mantraOS: for the good of devices, users, and the Earth itself.
+
+---
+### Next → Repair & Dharma 🔧
+**Read:** 009-right-to-repair → [../010-research/009-right-to-repair.md](../010-research/009-right-to-repair.md)
+
+> From fields to repair — how the Guardian Dragon heals.

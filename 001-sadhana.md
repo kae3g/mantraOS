@@ -41,3 +41,9 @@ Our sādhana is to build in ways that nurture the Guardian Dragon.
 > ahiṁsā satyam asteyam ityādīnāṁ samāsataḥ*  
 >  
 > "Compassion toward all beings, satisfaction, tolerance, self-control, nonviolence, truthfulness, and honesty—these are the qualities to cultivate."
+
+---
+### Next → Stage 2: Roots and Trees 🌳
+**Read:** 002-kernel-tree → [030-edu/002-kernel-tree.md](030-edu/002-kernel-tree.md)
+
+> This journey continues from the heart (sādhana) into the roots and trunk of the system: the kernel as living tree.

@@ -57,3 +57,9 @@ The Guardian Dragon ensures they share the stage fairly, without chaos.
 > "As pouring water on the root nourishes the trunk, branches and leaves, and as feeding the stomach nourishes the senses, so worship of the Lord satisfies all."  
 
 So too with processes: many voices, one song, guided by the unseen hand.
+
+---
+### Next → Files Garden 🌱
+**Read:** 005-files-garden → [005-files-garden.md](005-files-garden.md)
+
+> From music to gardens — how the Guardian Dragon tends.

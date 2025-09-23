@@ -99,3 +99,9 @@ The roadmap is a journey of compounding complexity:
 3.  **Phase 3: The First Application.** Build the `Satsang Graph` editor as the first true user-facing application.
 
 This document will evolve as the project does. It is a living record of our intent and our progress. Thank you for your interest. Your curiosity is the first step in building this future.
+
+---
+### Next → Funding & PBC Formation 💫
+**Read:** FUNDING → [FUNDING.md](FUNDING.md)
+
+> Translating vision into resourcing and public benefit governance.

@@ -90,3 +90,9 @@ So next time you open a device, whisper a thank you to its kernel, the hidden ro
 > *"When the roots are firm, the whole tree stands strong."*  
 
 The kernel is the root. Protect it, and the Guardian Dragon will watch over you.
+
+---
+### Next → Memory Library 📚
+**Read:** 003-memory-library → [003-memory-library.md](003-memory-library.md)
+
+> From roots to shelves — how the Guardian Dragon remembers.

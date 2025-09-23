@@ -48,3 +48,9 @@ Your data is your jewel. Guard it with dharma.
 > "Compassion toward all beings, satisfaction, tolerance, self-control, nonviolence, truthfulness, and honesty—these are the qualities to cultivate."  
 
 Let your OS be your protector, not your betrayer.
+
+---
+### Next → Sustainability Cows & Fields 🐄🌾
+**Read:** 008-sustainability-cows-fields → [008-sustainability-cows-fields.md](008-sustainability-cows-fields.md)
+
+> From treasure to fields — how the Guardian Dragon sustains.

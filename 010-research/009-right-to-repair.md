@@ -55,3 +55,9 @@ The **Guardian Dragon** wants us to open, fix, and continue the story.
 > — *Bhagavad-gītā 4.22*  
 
 When we build tools that last, we learn to be satisfied with what we already have — and we honor the Earth.
+
+---
+### Next → Vision Deep-Dive 📜
+**Read:** 010-technical-vision → [../010-technical-vision.md](../010-technical-vision.md)
+
+> From policy and practice, back into vision and architecture.

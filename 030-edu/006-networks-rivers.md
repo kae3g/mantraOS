@@ -54,3 +54,9 @@ Take care that it nourishes, not poisons.
 > "As pouring water on the root nourishes the trunk, branches and leaves, and as feeding the stomach nourishes the senses, so worship of the Lord satisfies all."  
 
 So too do messages flow toward their destinations.
+
+---
+### Next → Security Treasure 💎
+**Read:** 007-security-treasure → [007-security-treasure.md](007-security-treasure.md)
+
+> From rivers to treasure — how the Guardian Dragon protects.
