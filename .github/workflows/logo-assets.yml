@@ -1,0 +1,41 @@
+name: Logo Asset Checks
+
+on:
+  pull_request:
+    paths:
+      - "assets/logo/**"
+      - ".github/workflows/logo-assets.yml"
+      - "Makefile"
+  push:
+    branches: [ main ]
+    paths:
+      - "assets/logo/**"
+      - ".github/workflows/logo-assets.yml"
+      - "Makefile"
+
+jobs:
+  validate-logo-assets:
+    runs-on: ubuntu-latest
+    env:
+      # Set to "1" to enforce that large PNGs in drafts/** must be tracked by Git LFS.
+      # Leave unset or "0" for a gentler check (good for small repos).
+      MANTRA_LOGO_ENFORCE_LFS: "0"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run validator
+        run: |
+          python assets/logo/tools/validate.py
+
+      - name: Show tree (for debugging)
+        if: failure()
+        run: |
+          echo "::group::assets/logo tree"
+          find assets/logo -maxdepth 4 -print || true
+          echo "::endgroup::"

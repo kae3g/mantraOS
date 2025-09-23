@@ -1,0 +1,2 @@
+# Track only high-res preview PNGs under the logo drafts area with LFS
+assets/logo/drafts/**/*.png filter=lfs diff=lfs merge=lfs -text
