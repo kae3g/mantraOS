@@ -1,0 +1,22 @@
+image:
+  repository: REPLACE_WITH_ECR_URI/mantraos/site
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: true
+  className: alb
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+  hosts:
+    - host: REPLACE_WITH_DOMAIN
+      paths:
+        - path: /
+          pathType: Prefix

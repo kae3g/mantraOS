@@ -6,7 +6,7 @@ Each stage includes **reading, activity, reflection**.
 ---
 
 ## Stage 1: Meeting the Dragons 🐉
-- **Read:** [001-sadhana](../../001-sadhana.md)  
+- **Read:** [001-sadhana](../001-sadhana.md)  
 - **Activity (Kids):** Draw your own dragon. Is it Taking or Guardian?  
 - **Reflection (Adults):** What was the last time a device drained you? What would the Guardian Dragon have done differently?
 
@@ -62,14 +62,14 @@ Each stage includes **reading, activity, reflection**.
 ---
 
 ## Stage 9: Repair & Dharma 🔧
-- **Read:** [right-to-repair guide](../../010-research/009-right-to-repair.md)  
+- **Read:** [right-to-repair guide](../010-research/009-right-to-repair.md)  
 - **Activity:** Fix something small (toy, tool).  
 - **Reflection:** How did fixing change your relationship with it?
 
 ---
 
 ## Stage 10: Technical Vision ✨
-- **Read:** [010-technical-vision.md](../../010-technical-vision.md)  
+- **Read:** [010-technical-vision.md](../010-technical-vision.md)  
 - **Activity:** Write your own *sankalpa* (intention) for tech.  
 - **Reflection:** What one feature would you add to heal, not harm?
 

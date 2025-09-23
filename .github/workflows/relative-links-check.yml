@@ -1,0 +1,20 @@
+name: Relative Markdown Links Check
+
+on:
+  pull_request:
+  push:
+    paths:
+      - "**/*.md"
+      - "scripts/check-relative-links.sh"
+      - ".github/workflows/relative-links-check.yml"
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run link audit
+        run: |
+          bash scripts/check-relative-links.sh
