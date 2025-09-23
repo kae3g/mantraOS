@@ -2,7 +2,8 @@
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
-🧘 Spiritual Practice: [../001-sadhana.md](../001-sadhana.md)
+🧘 Spiritual Practice: [../001-sadhana.md](../001-sadhana.md)  
+📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
 
 
 This is a journey from story to system, from dragons to kernels, from compassion to code.  

@@ -1,5 +1,10 @@
 # Teacher's Guide for mantraOS Education Path
 
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
+🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
+📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
+
+
 > **SB 11.19.36**  
 > *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ  
 > ahiṁsā satyam asteyam ityādīnāṁ samāsataḥ*  

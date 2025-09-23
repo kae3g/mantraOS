@@ -15,7 +15,10 @@ set -euo pipefail
 #   0 = clean
 #   1 = violations found
 
-shopt -s globstar
+# Enable globstar if available (bash 4+)
+if [[ "${BASH_VERSION%%.*}" -ge 4 ]]; then
+  shopt -s globstar
+fi
 
 ROOT="$(git rev-parse --show-toplevel 2>/dev/null || echo ".")"
 cd "$ROOT"
@@ -36,6 +39,11 @@ check_file () {
     return 0
   fi
 
+  # Skip documentation files that contain examples
+  if [[ "$file" == "docs/STYLE-LINKS.md" ]]; then
+    return 0
+  fi
+
   # Pattern A: leading-slash absolute path in Markdown link
   # e.g. [text](/foo/bar.md)
   if grep -nE '\]\(/[^) ]+\)' "$file" >/dev/null; then
@@ -52,6 +60,39 @@ check_file () {
     grep -nE '\]\(\.\./\.\./' "$file" | sed 's/^/  /'
     echo
     violations=1
+  fi
+
+  # Pattern C: nav ribbon presence in sadhana + curriculum scrolls
+  if [[ "$file" == "001-sadhana.md" || "$file" == 030-edu/*.md ]]; then
+    if ! grep -q "Return to the Dragon's Front Door" "$file"; then
+      echo "${red}NAVIGATION RIBBON MISSING${reset} in $file"
+      echo "  Expected a ribbon like:"
+      echo "    🔙 Return to the Dragon's Front Door: [../README.md](../README.md)"
+      echo
+      violations=1
+    fi
+    if ! grep -q "Repository Map (lantern scroll)" "$file"; then
+      echo "${red}NAVIGATION RIBBON MISSING${reset} in $file"
+      echo "  Expected to include a Repository Map link."
+      echo
+      violations=1
+    fi
+    if [[ "$file" == "001-sadhana.md" ]]; then
+      if ! grep -q "Curriculum Index" "$file"; then
+        echo "${yellow}CURRICULUM INDEX LINK MISSING${reset} in $file"
+        echo "  Expected to include a Curriculum Index back-link."
+        echo
+        violations=1
+      fi
+    fi
+    if [[ "$file" == 030-edu/*.md ]]; then
+      if ! grep -q "Curriculum Index" "$file"; then
+        echo "${yellow}CURRICULUM INDEX LINK MISSING${reset} in $file"
+        echo "  Expected to include a Curriculum Index back-link."
+        echo
+        violations=1
+      fi
+    fi
   fi
 }
 

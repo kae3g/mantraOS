@@ -14,9 +14,9 @@ We keep links **branch-agnostic** so they work in GitHub UI, local previews, and
 ## ❌ Avoid
 
 - **Leading slash absolute paths**:
-  - `](/030-edu/002-kernel-tree.md)` ← **don't**
+  - `](/path/to/file.md)` ← **don't** (use relative paths instead)
 - **Over-up relative paths** (two `..` or more) unless absolutely necessary:
-  - `](../../something.md)` ← usually wrong from `030-edu/`
+  - `](../../something.md)` ← usually wrong from subdirectories
 
 ## Quick sanity check
 

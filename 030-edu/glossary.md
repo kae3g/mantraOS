@@ -1,5 +1,10 @@
 # Glossary of Terms for mantraOS
 
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
+🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
+📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
+
+
 > *vidyā dadāti vinayaṁ*  
 > *"True knowledge brings humility."*  
 

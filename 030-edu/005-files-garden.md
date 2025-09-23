@@ -1,5 +1,10 @@
 # 004 – How Files Are Like a Garden
 
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
+🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
+📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
+
+
 ## Introduction
 
 Children, imagine walking in a garden 🌱🌸🍎.  

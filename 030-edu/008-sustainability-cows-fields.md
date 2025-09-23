@@ -1,5 +1,10 @@
 # 007 – How Sustainability Is Like Cows and Fields
 
+🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
+🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
+📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
+
+
 ## Introduction
 
 Children, in the villages of old, cows were treated with reverence 🐄.  
