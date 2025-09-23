@@ -22,7 +22,8 @@ rasterize() {
   if command -v rsvg-convert >/dev/null 2>&1; then
     rsvg-convert -w 2048 -h 2048 "$LINEART" -o "$OUT"
   elif command -v inkscape >/dev/null 2>&1; then
-    inkscape "$LINEART" --export-type=png --export-filename="$OUT" -w 2048 -h 2048
+    inkscape "$LINEART" --export-type=png --export-filename="$OUT" -w 2048 -h
+    2048
   else
     echo "Need rsvg-convert or inkscape installed."
     exit 1
@@ -37,7 +38,8 @@ vectorize_one() {
   local TAG="${2:-$(timestamp)}"
 
   # Normalize name: guardian_<tag>_<stem>.*
-  local CLEAN_STEM="guardian_${TAG}_$(echo "$STEM" | tr '[:space:]' '_' | tr -cd '[:alnum:]_-.')"
+  local CLEAN_STEM="guardian_${TAG}_$(echo "$STEM" | tr '[:space:]' '_' | tr -cd
+  '[:alnum:]_-.')"
   local TMPPBM
   TMPPBM="$(mktemp /tmp/guardian.XXXXXX.pbm)"
 
@@ -87,7 +89,8 @@ usage() {
 Usage: $(basename "$0") <command>
 
 Commands:
-  rasterize        Rasterize guardian-dragon-lineart.svg → drafts/lineart_2048.png
+  rasterize        Rasterize guardian-dragon-lineart.svg →
+  drafts/lineart_2048.png
   vectorize        Vectorize all PNGs from drafts/incoming → drafts/processed
   archive [tag]    Move processed results to drafts/archive/<tag>
 EOF

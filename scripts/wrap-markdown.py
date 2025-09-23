@@ -30,7 +30,9 @@ code_fence_re = re.compile(r"^(\s*)```")
 html_block_start = re.compile(r"^\s*<([a-zA-Z]+)(\s|>|/>)")
 html_block_end = re.compile(r".*</\s*[a-zA-Z]+\s*>\s*$")
 table_re = re.compile(r"\|")
-table_divider_re = re.compile(r"^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?\s*$")
+table_divider_re = re.compile(
+    r"^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?\s*$"
+)
 hr_re = re.compile(r"^\s*([-_*]\s*){3,}\s*$")
 heading_re = re.compile(r"^\s{0,3}#{1,6}\s")
 list_re = re.compile(r"^(\s*)([-+*]|\d+\.)\s+")
@@ -110,7 +112,8 @@ def process_file(path: Path):
     def flush_para():
         nonlocal para_buf, para_prefix, out
         if para_buf:
-            out.extend(wrap_paragraph(para_buf, prefix=para_prefix, width=WIDTH))
+            out.extend(wrap_paragraph(para_buf, prefix=para_prefix,
+                                      width=WIDTH))
             para_buf = []
             para_prefix = ""
 
@@ -126,7 +129,8 @@ def process_file(path: Path):
             continue
 
         # HTML block: start/end detection (simple heuristic)
-        if not in_html and html_block_start.match(line) and not line.strip().endswith("/>"):
+        if not in_html and html_block_start.match(line) and \
+           not line.strip().endswith("/>"):
             flush_para()
             in_html = True
             out.append(line.rstrip())
@@ -138,7 +142,8 @@ def process_file(path: Path):
             continue
 
         # Preserve tables and dividers
-        if table_divider_re.match(line) or (table_re.search(line) and not line.strip().startswith(">")):
+        if table_divider_re.match(line) or \
+           (table_re.search(line) and not line.strip().startswith(">")):
             flush_para()
             out.append(line.rstrip())
             continue
@@ -168,7 +173,8 @@ def process_file(path: Path):
         if m_li:
             li = m_li.group(0)
             content = rest[len(li):]
-            # New paragraph if bullet lines are being collected with a prefix that changes
+            # New paragraph if bullet lines are being collected with a prefix
+            # that changes
             new_prefix = (bq + li)
             if para_buf and para_prefix != new_prefix:
                 flush_para()

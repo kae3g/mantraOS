@@ -15,7 +15,8 @@ data "aws_route53_zone" "existing" {
 
 locals {
   zone_id = local.use_dns ? (
-    var.hosted_zone_id != "" ? data.aws_route53_zone.existing[0].zone_id : aws_route53_zone.this[0].zone_id
+    var.hosted_zone_id != "" ? data.aws_route53_zone.existing[0].zone_id :
+    aws_route53_zone.this[0].zone_id
   ) : ""
 }
 

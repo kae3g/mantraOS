@@ -16,7 +16,8 @@
   place(top + center, [mantraOS Educational Kit])
 }
 #let footer(content) = {
-  place(bottom + center, [🐉 Ahimsa: do no harm — github.com/kae3g/mantraOS — Page #counter(page)])
+  place(bottom + center, [🐉 Ahimsa: do no harm — github.com/kae3g/mantraOS —
+  Page #counter(page)])
 }
 
 #page(header: header, footer: footer, body: it => it)

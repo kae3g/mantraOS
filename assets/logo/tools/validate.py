@@ -32,7 +32,8 @@ DRAFTS_DIR = LOGO_DIR / "drafts"
 PNG_MAX_MB = 5
 SVG_MAX_MB = 2
 
-# If LFS enforcing is enabled, any PNG in drafts/** above this must be LFS-tracked
+# If LFS enforcing is enabled, any PNG in drafts/** above this must be LFS-track
+  ed
 PNG_LFS_ENFORCE_MB = 1
 
 # Naming rule
@@ -59,7 +60,8 @@ def size_mb(p: Path) -> float:
 
 def git_check_attr(attr: str, file_path: Path) -> str:
     """
-    Returns the value for a given git attribute on a path, or empty string if unknown.
+    Returns the value for a given git attribute on a path, or empty string if
+    unknown.
     Example output:
       assets/logo/drafts/processed/guardian_x.png: filter: lfs
     """
@@ -91,7 +93,8 @@ def is_lfs_tracked(p: Path) -> bool:
 
 def check_processed_pairs_and_sizes():
     if not PROCESSED.exists():
-        print("No processed dir found; skipping processed checks (nothing to validate).")
+        print("No processed dir found; skipping processed checks (nothing to
+        validate).")
         return
 
     pngs = sorted(PROCESSED.glob("*.png"))
@@ -139,7 +142,8 @@ def check_lfs_coverage_for_drafts():
       MANTRA_LOGO_ENFORCE_LFS=1 make logo-validate
     """
     if not ENFORCE_LFS:
-        print("LFS enforcement is OFF (set MANTRA_LOGO_ENFORCE_LFS=1 to enable).")
+        print("LFS enforcement is OFF (set MANTRA_LOGO_ENFORCE_LFS=1 to
+        enable).")
         return
 
     if not DRAFTS_DIR.exists():
@@ -168,7 +172,8 @@ def check_lfs_coverage_for_drafts():
             )
         print("::endgroup::")
         fail(
-            "Some large PNGs under assets/logo/drafts/** are not tracked by Git LFS. "
+            "Some large PNGs under assets/logo/drafts/** are not tracked by Git
+            LFS. "
             "Enable LFS for these files or disable enforcement for this run."
         )
     else:

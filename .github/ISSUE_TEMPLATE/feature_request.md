@@ -1,7 +1,5 @@
 ---
-name: 🌱 Feature Request
-about: Suggest an idea for MantraOS
-title: "[Feature] "
+name: 🌱 Feature Request about: Suggest an idea for MantraOS title: "[Feature] "
 labels: enhancement
 ---
 

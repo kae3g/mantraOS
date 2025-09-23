@@ -61,7 +61,8 @@ while read -r f; do
         if (in_code) next
         if (match(line,/^\s*>/)) next
         if (index(line,"|")>0) next
-        if (length(line) > max) { printf("  L%05d (%d): %s\n", NR, length(line), line) }
+        if (length(line) > max) { printf("  L%05d (%d): %s\n", NR, length(line),
+        line) }
       }
     ' "$f" | head -n 5
     echo "---- tail of $f ----"
@@ -80,4 +81,5 @@ if [[ $viol -ne 0 ]]; then
   exit 1
 fi
 
-echo "✅ All checked files respect <= ${MAX_COL} columns (with verse/code/table exemptions)."
+echo "✅ All checked files respect <= ${MAX_COL} columns (with verse/code/table
+exemptions)."

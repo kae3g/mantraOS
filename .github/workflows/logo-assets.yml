@@ -17,7 +17,8 @@ jobs:
   validate-logo-assets:
     runs-on: ubuntu-latest
     env:
-      # Set to "1" to enforce that large PNGs in drafts/** must be tracked by Git LFS.
+      # Set to "1" to enforce that large PNGs in drafts/** must be tracked by Gi
+  t LFS.
       # Leave unset or "0" for a gentler check (good for small repos).
       MANTRA_LOGO_ENFORCE_LFS: "0"
     steps:

@@ -1,1 +1,2 @@
-# Placeholder for additional providers (kubernetes, helm) if you want TF to manage add-ons.
+# Placeholder for additional providers (kubernetes, helm) if you want TF to mana
+  ge add-ons.

@@ -3,9 +3,8 @@
 ---
 
 ### Prompt
-Draw a big tree. Add its roots underground.  
-Roots = Kernel.  
-Branches and leaves = Apps.  
+Draw a big tree. Add its roots underground. Roots = Kernel. Branches and leaves
+= Apps.
 
 ---
 

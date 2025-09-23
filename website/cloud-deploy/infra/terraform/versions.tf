@@ -1,6 +1,7 @@
 terraform {
   required_version = ">= 1.5.0"
-  # For remote state, configure backend via backend.hcl and terraform init -backend-config=backend.hcl
+  # For remote state, configure backend via backend.hcl and terraform init -back
+  end-config=backend.hcl
   # backend "s3" {}
 }
 

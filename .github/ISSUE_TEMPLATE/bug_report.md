@@ -1,7 +1,5 @@
 ---
-name: 🐛 Bug Report
-about: Report something that isn't working
-title: "[Bug] "
+name: 🐛 Bug Report about: Report something that isn't working title: "[Bug] "
 labels: bug
 ---
 
@@ -29,8 +27,7 @@ Attach if helpful.
 ---
 
 ## 🖥️ Environment (if technical)
-- Device / OS:
-- MantraOS version:
+- Device / OS: MantraOS version:
 
 ---
 

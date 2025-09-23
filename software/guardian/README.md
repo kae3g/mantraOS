@@ -4,12 +4,13 @@
 
 The Guardian group is a tiny constellation of userspace daemons:
 
-- `guardian-silence` – mindful ring scheduler (never startles).  
-- `guardian-reflect` – local gratitude & usage journaling.  
-- `guardian-mercy` – one-toggle calm mode (theme + notifier gates).  
-- `guardian-display` – e-ink orchestrator (partial/full refresh, ghost clearing).  
-- `guardian-io` – device gatekeeper with friendly prompts.  
-- `guardian-network` – LAN/LoRa ferry; narrow, declared egress.
+- `guardian-silence` – mindful ring scheduler (never startles).
+- `guardian-reflect` – local gratitude & usage journaling. `guardian-mercy` –
+- one-toggle calm mode (theme + notifier gates). `guardian-display` – e-ink
+- orchestrator (partial/full refresh, ghost
+clearing).
+- `guardian-io` – device gatekeeper with friendly prompts. `guardian-network` –
+- LAN/LoRa ferry; narrow, declared egress.
 
 ### Configuration (TOML, child-legible)
 ```toml
