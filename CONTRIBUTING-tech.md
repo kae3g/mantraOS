@@ -1,174 +1,90 @@
-# Contributing to MantraOS 🐉
+# 🛠️ Contributing to MantraOS (Technical Guide)
 
-Welcome, friend. Thank you for wishing to walk with our **Guardian Dragon**.  
-This page explains how to build, test, and extend MantraOS, whether you are a young learner, a new developer, or a seasoned engineer.
-
----
-
-## 📖 Philosophy of Contribution
-
-- **Ahimsa (Do No Harm):** Code should protect, not exploit.  
-- **Sādhanā (Daily Practice):** Write small, consistent commits.  
-- **Seva (Service):** Contributions serve the community, not ego.  
-- **Satsang (Shared Truth):** Documentation is as valuable as code.  
+This document is for **technical contributors**: developers, designers, hardware engineers, and asset creators.  
+For a general community welcome, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ---
 
-## ⚙️ Development Environment
+## 📂 Areas of Contribution
 
-### Requirements
-- **Rust** (latest stable, via [rustup](https://rustup.rs))  
-- **Cargo** (bundled with Rust)  
-- **Python 3.10+** (for some utilities)  
-- **Make** and **Docker** (for educational kit builds)  
-- **Pandoc + LaTeX** (optional, if you want to export PDFs outside Docker)  
+1. **Philosophy / Docs** → `/philosophy`, `sadhana.md`  
+   Shape metaphors, glossary entries, and stories.
 
-On Debian/Ubuntu:
-```bash
-sudo apt-get install build-essential pkg-config libssl-dev make docker.io
-```
+2. **Design** → `/design`  
+   System design, UI, accessibility studies.
 
-On macOS:
+3. **Hardware** → `/hardware`  
+   Board layouts, BOMs, sustainable materials.
 
-```bash
-brew install rustup-init make docker pandoc
-rustup-init
-```
+4. **Firmware / Kernel** → `/firmware`  
+   Rust microkernel code, IPC, runtime sketches.
+
+5. **Logo & Mascot Assets** → `/assets/logo`  
+   Mascot prompts, vectorizations, and validator tools.  
+   See section below.
 
 ---
 
-## 🧪 Building MantraOS
+## 🖼️ Asset Contributions (Mascot/Logo)
 
-### 1. Clone the Repository
+Detailed in [`assets/logo/CONTRIBUTING-assets.md`](./assets/logo/CONTRIBUTING-assets.md).
 
-```bash
-git clone https://github.com/kae3g/mantraOS
-cd mantraOS
-```
+Quick summary:
 
-### 2. Build the Kernel & Guardian Services
-
-```bash
-cd software
-cargo build --release
-```
-
-### 3. Run Tests
-
-```bash
-cargo test
-```
-
-### 4. Cross-Compile (for embedded boards)
-
-Set your target (e.g., ESP32, RISC-V):
-
-```bash
-rustup target add riscv32imac-unknown-none-elf
-cargo build --release --target=riscv32imac-unknown-none-elf
-```
-
-> 🐉 **Note:** Hardware bring-up instructions live in `/hardware/bringup.md`.
+- Drop PNG drafts into `assets/logo/drafts/incoming/`.  
+- Run `make logo-vectorize` → produces paired `.png + .svg` in `processed/`.  
+- Run `make logo-validate` → checks naming, pairs, sizes.  
+- Archive optional sets via `make logo-archive TAG=v001`.  
+- Style: Guardian Dragon, calm, protective, asymmetrical, natural armor.
 
 ---
 
-## 🖨️ Building the Educational Kit PDFs
+## 🛠️ Technical Workflow
 
-The **Workbook**, **Coloring Book**, and **Companion Guide** can all be built into PDFs.
+1. **Fork & Branch**
+   ```bash
+   git checkout -b feat/my-feature
+   ```
 
-### With Docker (recommended)
+2. **Develop & Document**
 
-```bash
-cd 030-edu/print-kit
-docker build -t mantraos-pdf .
-docker run --rm -v $PWD/../..:/workspace mantraos-pdf
-```
+   * Rust for firmware.
+   * Markdown for diagrams/specs.
+   * SVG for final assets.
 
-### Without Docker (native build)
+3. **Validate**
 
-```bash
-cd 030-edu/print-kit
-make all
-```
+   ```bash
+   make lint          # code (if available)
+   make logo-validate # assets
+   ```
 
-Outputs:
+4. **Commit Style**
 
-* `030-edu/worksheets/booklet.pdf`
-* `030-edu/coloring-book/booklet.pdf`
-* `030-edu/coloring-book/companion-guide.pdf`
+   ```
+   feat: add satsang-graph renderer
+   fix: correct e-ink refresh
+   docs: update sadhana glossary
+   ```
 
----
+5. **Pull Requests**
 
-## 📂 Repository Structure (for Developers)
-
-```
-/philosophy/          ← stories and dharma grounding
-/docs/                ← design documents (kernel/runtime, networking, etc.)
-/hardware/            ← BOMs, modular diagrams, test plans
-/software/            ← Rust code: kernel, Guardian Services
-/030-edu/             ← educational kit: worksheets, coloring, print system
-README.md             ← main vision & orientation
-CONTRIBUTING-tech.md  ← this file
-```
+   * Open PR against `main`.
+   * Use the [PR template](.github/pull_request_template.md).
+   * CI validates logo assets automatically.
 
 ---
 
-## 🧠 Coding Style & Practices
+## ⚖️ Ethics & Licensing
 
-* **Rust Clarity:** prefer explicit lifetimes and types.
-* **Capability Model:** no ambient authority; every resource via capability.
-* **Logs:** human-readable, e.g.,
-
-  ```
-  2025-09-23 09:15 Silence Bell: a soft ring reminded you to breathe.
-  ```
-* **Commits:** short, descriptive titles + reference file/module.
-* **Docs:** all public functions documented with `///` comments.
+* **The Unlicense** → public domain dedication.
+* No proprietary or franchise IP.
+* Contributions must be respectful, non-violent, inclusive.
 
 ---
 
-## 🌍 Sustainability & Hardware Hacking
+## 🙏 Closing Thought
 
-* **BOM:** see `/hardware/000-bom.md`.
-* **Modules:** RAM, battery, and screen are serviceable.
-* **Tests:** drop + IPX4 tests in `/hardware/tests/`.
-
-Encourage **right-to-repair** and **long lifespan design** in all contributions.
-
----
-
-## 🐛 Issues & Contributions
-
-* Use **GitHub Issues** for bugs, enhancements, and questions.
-
-* Tag with:
-
-  * `philosophy` – if about vision or ethics
-  * `design` – if about architecture or specs
-  * `hardware` – if about BOM, enclosure, or testing
-  * `software` – if about Rust code
-  * `edu` – if about the educational kit
-
-* Pull Requests:
-
-  1. Fork the repo.
-  2. Create a branch: `git checkout -b feature/guardian-timer`.
-  3. Commit changes: `git commit -m "Add mercy mode dimmer"`.
-  4. Push branch: `git push origin feature/guardian-timer`.
-  5. Open PR with description + references.
-
----
-
-## 🙏 Blessing for Contributors
-
-> **SB 11.20.32**
-> *bhaktyāham ekayā grāhyaḥ śraddhayātmā priyaḥ satām*
->
-> "I am attained only by devotion,
-> and am dear to those with faith."
-
-May your contributions be acts of devotion.
-May your code bring peace, resilience, and clarity.
-May you always remember: **you are co-raising the Guardian Dragon.**
-
----
+Technical work here is **service** (*seva*).
+Just as roots nourish the tree unseen, your careful commits nourish the Guardian Dragon unseen.
+Thank you for your service 🌱🐉.

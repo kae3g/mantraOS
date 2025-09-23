@@ -1,105 +1,50 @@
-# Contributing to MantraOS
+# 🌱 Contributing to MantraOS
 
-Welcome, friend 🌱🐉
+Welcome, dear friend 🐉✨
 
-Thank you for your interest in helping grow the **Guardian Dragon**.  
-This project is not only software and hardware — it is also a **practice of mindful design, sustainable craft, and gentle technology**.
-
-This guide is for **technical contributors**: developers, designers, engineers, and artists.  
-For the deeper vision and philosophy, see:
-
-- [`sadhana.md`](./sadhana.md) – the project's guiding story and ethos
-- [`README.md`](./README.md) – overview, roadmap, and audiences
+Whether you are a child, a parent, a teacher, a seeker, an artist, or a developer — there is space for you here.  
+**MantraOS** is a gentle dragon we are raising together, and every small act of care helps it grow.
 
 ---
 
-## 🧭 Where to Contribute
+## 💖 Ways You Can Contribute
 
-### 1. Philosophy & Documentation
-- Location: [`/philosophy`](./philosophy/)  
-- Shape the stories, metaphors, and glossary entries that help teach MantraOS.  
-- Tone: nurturing, accessible, wise.
+### 1. Storytelling & Sharing
+- Write or draw about the Guardian Dragon.  
+- Share metaphors, mantras, or poems.  
+- Translate project ideas into your own language.
 
-### 2. Design
-- Location: [`/design`](./design/)  
-- System design, UI mockups, accessibility studies.  
-- Style: calm, mindful, rooted in **human repairability** and **right-to-repair principles**.
+### 2. Teaching & Guiding
+- Help children or newcomers understand mindful technology.  
+- Create exercises, coloring pages, or workshops.
 
-### 3. Hardware
-- Location: [`/hardware`](./hardware/)  
-- Device sketches, modular board layouts, BOMs (bill of materials).  
-- Focus: **durability**, **repairability**, **sustainable material choices**.
+### 3. Art & Design
+- Sketch dragons, saplings, or dream villages.  
+- Experiment with colors, symbols, or ornaments.  
+- See: [`assets/logo/CONTRIBUTING-assets.md`](./assets/logo/CONTRIBUTING-assets.md) for mascot/logo art contributions.
 
-### 4. Firmware / Kernel
-- Location: [`/firmware`](./firmware/)  
-- Kernel runtime sketches, Rust code, microkernel modules, secure IPC design.  
-- Focus: **minimal, reliable, mindful code**.
+### 4. Community & Support
+- Share feedback about the vision.  
+- Suggest sustainable practices.  
+- Help others learn.
 
-### 5. Logo & Mascot Assets
-- Location: [`/assets/logo`](./assets/logo/)  
-- Where the **Guardian Dragon mascot/logo** lives.  
-- Includes:
-  - [`logo-prompt-guide.md`](./assets/logo/logo-prompt-guide.md) – prompt tips for generating art  
-  - [`CONTRIBUTING-assets.md`](./assets/logo/CONTRIBUTING-assets.md) – detailed contributor checklist  
-  - [`tools/`](./assets/logo/tools/) – pipeline + validator
+### 5. Technical Contributions
+- Developers, designers, and engineers should see:  
+  [**CONTRIBUTING-tech.md**](./CONTRIBUTING-tech.md)
 
 ---
 
-## 🛠️ Technical Contribution Workflow
+## 🌍 Principles
 
-1. **Fork & Branch**  
-   Fork the repo and create a branch for your changes:
-   ```bash
-   git checkout -b feat/my-feature
-   ```
-
-2. **Write & Document**
-
-   * Code contributions: Rust preferred.
-   * Hardware sketches: Markdown diagrams, SVGs.
-   * Assets: see [assets/logo/CONTRIBUTING-assets.md](./assets/logo/CONTRIBUTING-assets.md).
-
-3. **Validate**
-
-   * Run `make lint` or equivalent for code.
-   * For logo assets: `make logo-validate`.
-
-4. **Commit Guidelines**
-
-   * Use clear, imperative commit messages:
-
-     ```
-     feat: add satsang-graph renderer
-     fix: correct e-ink refresh rate logic
-     docs: update sadhana glossary with ahimsa entry
-     ```
-   * Keep commits atomic and scoped.
-
-5. **Pull Requests**
-
-   * Open PRs against `main`.
-   * PR template will remind you to run validations.
-   * CI will check logo assets automatically.
+- **Ahimsa** – Do no harm. Contributions should be gentle and respectful.  
+- **Sustainability** – Aim for repairable, reusable, recyclable ideas.  
+- **Inclusivity** – All ages, abilities, and cultures are welcome.  
+- **Sharing** – This project is under **The Unlicense**. Contributions belong to everyone.
 
 ---
 
-## ⚖️ Licensing & Ethics
+## 🙏 Thank You
 
-* This project uses **The Unlicense** (see [LICENSE](./LICENSE)).
-* Contributions must be compatible with **public-domain dedication**.
-* Please keep contributions:
-
-  * **Non-violent**
-  * **Family-friendly**
-  * **Respectful of cultural traditions**
-
-No proprietary IP, no copied franchise art, no license conflicts.
-
----
-
-## 🫶 Thank You
-
-Every contribution — whether it is a line of code, a hardware diagram, or a brushstroke of the Guardian Dragon — nourishes this vision.
-
-Let us build tools that are **gentle, repairable, and sustainable**.
-Together, we can raise the Guardian Dragon with care.
+Every poem, line of code, brushstroke, and kind thought nourishes this vision.  
+Together, we can make technology that protects, rather than consumes —  
+a Guardian Dragon for our villages and our children.
