@@ -4,7 +4,7 @@
 
 [![Education Path](
 https://img.shields.io/badge/MantraOS-Curriculum-brightgreen?style=for-the-badge&logo=book)](030-edu/000-curriculum.md)
- [![Visual Tree](
+[![Visual Tree](
 https://img.shields.io/badge/MantraOS-Tree%20Diagram-blueviolet?style=for-the-badge&logo=sitemap)](030-edu/CURRICULUM-TREE.md)
 
 ---
@@ -251,7 +251,7 @@ is free, unlicensed, and belongs to everyone. May it be a seed of balance.
 > **SB 11.29.34** *sarva-bhūteṣu mad-bhāvo māṁ bhajantam īśvaram*
 > [#SB-11.29.34a] *hitvānyathā-buddhiṁ yo māṁ veda sa mad-bhaktaḥ śreṣṭhaḥ*
 > [#SB-11.29.34b]
->
+
 > "He who sees Me in all beings, worshiping Me and abandoning false conceptions,
 
 > is the best devotee."

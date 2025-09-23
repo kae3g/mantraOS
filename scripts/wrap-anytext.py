@@ -2,7 +2,8 @@
 """
 Smart 80-col auto-fixer for common text types.
 
-Edits in-place for: Markdown (.md, .mdx), Shell (.sh, .bash), YAML (.yml, .yaml),
+Edits in-place for: Markdown (.md, .mdx), Shell (.sh, .bash), YAML (.yml,
+.yaml),
 and JSON (.json). For other files, prints an exact report only.
 
 Rules
@@ -19,7 +20,8 @@ Shell (.sh/.bash):
   - Maintain indentation of the original line.
 
 YAML:
-  - Convert long inline scalars after ": " to folded scalars (>-) and wrap lines.
+  - Convert long inline scalars after ": " to folded scalars (>-) and wrap
+  lines.
   - Wrap already-indented paragraph content to <=80, preserving indent.
 
 JSON:
@@ -119,7 +121,8 @@ def fix_markdown(p: Path) -> int:
         if code_fence_re.match(line):
             flush(); out.append(line.rstrip()); in_code = not in_code; continue
         if in_code: out.append(line.rstrip()); continue
-        if table_div_re.match(line) or heading_re.match(line) or hr_re.match(line):
+        if table_div_re.match(line) or heading_re.match(line) or
+        hr_re.match(line):
             flush(); out.append(line.rstrip()); continue
         if not line.strip():
             flush(); out.append(""); continue
@@ -225,7 +228,8 @@ def fix_yaml(p: Path) -> int:
                 changed = 1
                 out.append(f"{indent}{key}: >-")
                 wrapped = textwrap.wrap(val, width=WIDTH - len(indent) - 2,
-                                        break_long_words=False, break_on_hyphens=False)
+                                        break_long_words=False,
+                                        break_on_hyphens=False)
                 for w in wrapped:
                     out.append(indent + "  " + w)
                 continue
@@ -244,7 +248,8 @@ def fix_json(p: Path) -> int:
     new = json.dumps(data, indent=2, ensure_ascii=False)
     # Pretty printing avoids most long lines; strings may still exceed 80.
     if APPLY and new != p.read_text(encoding="utf-8"):
-        p.write_text(new + ("\n" if not new.endswith("\n") else ""), encoding="utf-8")
+        p.write_text(new + ("\n" if not new.endswith("\n") else ""),
+        encoding="utf-8")
         return 1
     return 1 if new != p.read_text(encoding="utf-8") else 0
 
@@ -254,7 +259,8 @@ def main():
     reported = 0
     for f in list(Path(".").rglob("*")):
         if not f.is_file(): continue
-        if f.parts and f.parts[0] in (".git", "node_modules", "dist", "build", "out"):
+        if f.parts and f.parts[0] in (".git", "node_modules", "dist", "build",
+        "out"):
             continue
         if is_binary(f): continue
         ext = f.suffix.lower()
@@ -280,7 +286,8 @@ def main():
     if not APPLY:
         print("Dry-run complete. Set APPLY=1 to write changes.")
     else:
-        print(f"Modified files: {modified}. Reported (unfixed types): {reported}.")
+        print(f"Modified files: {modified}. Reported (unfixed types):
+        {reported}.")
 
 if __name__ == "__main__":
     main()

@@ -30,4 +30,5 @@ guide:
 	  -o 030-edu/coloring-book/companion-guide.pdf
 
 clean:
-	rm -f 030-edu/print-kit/*.pdf 030-edu/worksheets/*.pdf 030-edu/coloring-book/*.pdf
+	rm -f 030-edu/print-kit/*.pdf 030-edu/worksheets/*.pdf
+	030-edu/coloring-book/*.pdf

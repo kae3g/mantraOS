@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0
+560 560">
   <!-- Background kept transparent for easy theming -->
-  <g id="guardian-dragon" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g id="guardian-dragon" fill="none" stroke-linecap="round"
+  stroke-linejoin="round">
     <!-- Main serpentine body (asymmetric coil, not a perfect circle) -->
     <path id="body"
       d="M 360 180
@@ -22,16 +24,22 @@
       stroke="#FFA94D" stroke-opacity="0.55" stroke-width="9"/>
 
     <!-- Helmet / face shield (closed mouth; calm eyes) -->
-    <ellipse id="helmet" cx="358" cy="182" rx="28" ry="34" fill="none" stroke="#2B2B2B" stroke-width="5"/>
-    <path id="helmet-band" d="M 334 184 Q 358 172 382 184" stroke="#D4B483" stroke-width="4"/>
+    <ellipse id="helmet" cx="358" cy="182" rx="28" ry="34" fill="none"
+    stroke="#2B2B2B" stroke-width="5"/>
+    <path id="helmet-band" d="M 334 184 Q 358 172 382 184" stroke="#D4B483"
+    stroke-width="4"/>
     <circle id="eye-left" cx="350" cy="174" r="3.5" fill="#111"/>
     <circle id="eye-right" cx="366" cy="174" r="3.5" fill="#111"/>
 
     <!-- Whiskers & ear fins (calligraphic strokes) -->
-    <path id="whisker-left"  d="M 340 176 Q 304 168 268 178" stroke="#7C4A33" stroke-width="4"/>
-    <path id="whisker-right" d="M 376 176 Q 414 168 450 182" stroke="#7C4A33" stroke-width="4"/>
-    <path id="ear-left" d="M 346 154 Q 336 142 330 132" stroke="#7C4A33" stroke-width="4"/>
-    <path id="ear-right" d="M 372 154 Q 382 142 388 132" stroke="#7C4A33" stroke-width="4"/>
+    <path id="whisker-left"  d="M 340 176 Q 304 168 268 178" stroke="#7C4A33"
+    stroke-width="4"/>
+    <path id="whisker-right" d="M 376 176 Q 414 168 450 182" stroke="#7C4A33"
+    stroke-width="4"/>
+    <path id="ear-left" d="M 346 154 Q 336 142 330 132" stroke="#7C4A33"
+    stroke-width="4"/>
+    <path id="ear-right" d="M 372 154 Q 382 142 388 132" stroke="#7C4A33"
+    stroke-width="4"/>
 
     <!-- Armor accents (dark-stained bamboo/hemp plates) -->
     <path d="M 330 212 L 318 232" stroke="#D4B483" stroke-width="7"/>
@@ -41,12 +49,14 @@
 
     <!-- Sapling protected within the inner curve (gentle, not enclosed) -->
     <g id="sapling">
-      <line x1="300" y1="268" x2="300" y2="226" stroke="#859900" stroke-width="7"/>
+      <line x1="300" y1="268" x2="300" y2="226" stroke="#859900"
+      stroke-width="7"/>
       <ellipse cx="286" cy="232" rx="14" ry="7" fill="#859900"/>
       <ellipse cx="314" cy="232" rx="14" ry="7" fill="#859900"/>
     </g>
 
     <!-- Tail tip flourish -->
-    <path id="tail-tip" d="M 336 392 Q 354 402 368 418 Q 344 420 326 410" stroke="#7C4A33" stroke-width="6"/>
+    <path id="tail-tip" d="M 336 392 Q 354 402 368 418 Q 344 420 326 410"
+    stroke="#7C4A33" stroke-width="6"/>
   </g>
 </svg>
