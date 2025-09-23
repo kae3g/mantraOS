@@ -1,4 +1,4 @@
-# 005 – How Networks Are Like Rivers
+# 006 – How Networks Are Like Rivers
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  

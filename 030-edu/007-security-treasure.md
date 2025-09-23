@@ -1,4 +1,4 @@
-# 006 – How Security Is Like Treasure Chests
+# 007 – How Security Is Like Treasure Chests
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  

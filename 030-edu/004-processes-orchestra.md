@@ -1,4 +1,4 @@
-# 003 – How Processes Are Like an Orchestra
+# 004 – How Processes Are Like an Orchestra
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  

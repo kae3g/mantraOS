@@ -1,4 +1,4 @@
-# 002 – How Memory Is Like a Library
+# 003 – How Memory Is Like a Library
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  

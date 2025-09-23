@@ -1,4 +1,4 @@
-# 001 – How a Kernel is Like a Tree
+# 002 – How a Kernel is Like a Tree
 
 🔙 Return to the Dragon's Front Door: [../README.md](../README.md)  
 🗺️ Repository Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md)  
