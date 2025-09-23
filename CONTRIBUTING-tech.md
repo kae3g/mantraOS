@@ -43,6 +43,56 @@ Quick summary:
 
 ---
 
+## 🧪 Docs QA: Link Audit, Nav Ribbons, and Quick Links
+
+We enforce a gentle-but-strict docs discipline so learners never get lost:
+
+**What's checked automatically**
+- **No absolute Markdown links** (no `](/path.md)`), so links are branch-agnostic.
+- **No over-up `../../` paths** (keeps structure simple and portable).
+- **Nav Ribbon required** at the top of:
+  - `001-sadhana.md`
+  - all curriculum files in `030-edu/`
+  (must contain "Return to the Dragon's Front Door", "Repository Map (lantern scroll)", and "Curriculum Index")
+- **Quick Links footer required** for *all* stage scrolls (Stages 1–10):
+  - must contain "Curriculum Index", "Visual Tree Diagram", and "Return to README".
+
+**Run locally**
+```bash
+bash scripts/check-relative-links.sh
+```
+If everything is fine, you'll see:
+```
+✅ Link audit clean. All Markdown links are branch-agnostic.
+```
+On failures, the script prints the offending lines and the **tail of the file** for context.  
+You can adjust the context length:
+```bash
+TAIL_LINES=40 bash scripts/check-relative-links.sh
+```
+
+**Pre-commit hook (recommended)**
+```bash
+bash scripts/install-git-hooks.sh
+```
+This installs a `pre-commit` hook that runs the audit automatically before each commit.
+
+**CI checks**
+- GitHub Actions runs the same audit on pushes/PRs:
+  - `.github/workflows/relative-links-check.yml`
+- If you add deeper subdirectories or special cases, update:
+  - `scripts/check-relative-links.sh`
+  - (Optional) set `LINK_AUDIT_IGNORE` for temporary exceptions.
+
+**Style guidance**
+- See `docs/STYLE-LINKS.md` for examples of correct relative links from various folders.
+- From `030-edu/` to repo root, prefer `../README.md` style.
+- Avoid leading slashes and multiple `..` hops unless absolutely necessary.
+
+> Our goal is kindness for future readers: consistent navigation, no dead ends, and links that work everywhere.
+
+---
+
 ## 🛠️ Technical Workflow
 
 1. **Fork & Branch**

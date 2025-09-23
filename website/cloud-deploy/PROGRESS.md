@@ -1,8 +1,8 @@
 # 🌿 MantraOS Progress Log – Website & Cloud Deploy
 
 > **Uddhava Gītā (Śrīmad-Bhāgavatam 11.10.4)**  
-> *yadṛcchayā mat-kathādau jāta-śraddhas tu yaḥ pumān*  
-> *na nirvinno nāti-sakto bhakti-yogo 'sya siddhi-daḥ*  
+> *yadṛcchayā mat-kathādau jāta-śraddhas tu yaḥ pumān* [#SB-11.10.4a]  
+> *na nirvinno nāti-sakto bhakti-yogo 'sya siddhi-daḥ* [#SB-11.10.4b]  
 > **Translation (ISKCON):**  
 > "A person who develops faith in hearing narrations about Me,  
 > who is neither too detached nor overly attached, is assured of perfection in bhakti-yoga."
@@ -80,8 +80,8 @@
 ---
 
 > **Uddhava Gītā (Śrīmad-Bhāgavatam 11.29.34)**  
-> *bhaktyāham ekayā grāhyaḥ śraddhayātmā priyaḥ satām*  
-> *bhaktir mama priyā yāvān mayy ātmā ca yathā priyaḥ*  
+> *bhaktyāham ekayā grāhyaḥ śraddhayātmā priyaḥ satām* [#SB-11.29.34a]  
+> *bhaktir mama priyā yāvān mayy ātmā ca yathā priyaḥ* [#SB-11.29.34b]  
 > **Translation (ISKCON):**  
 > "I am attained only by unalloyed devotion.  
 > Devotion is dear to Me, just as the devotee is dear,  

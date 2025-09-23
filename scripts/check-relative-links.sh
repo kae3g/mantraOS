@@ -5,9 +5,15 @@ set -euo pipefail
 # Fails on:
 #  1) Leading-slash absolute Markdown links: ](/something.md)
 #  2) Double-upwards (or more) relative links: ](../../something.md)
+#  3) Missing nav ribbons in curriculum scrolls (001-sadhana.md + 030-edu/*.md)
+#  4) Missing Quick Links in all stage scrolls (Stages 1–10)
 #
 # Usage:
 #   bash scripts/check-relative-links.sh
+#   TAIL_LINES=40 bash scripts/check-relative-links.sh
+#
+# Configurable variables:
+#   TAIL_LINES  - number of context lines to show when violations found (default: 20)
 # Optional:
 #   export LINK_AUDIT_IGNORE="path/to/file.md|docs/legacy/.*"
 #
@@ -30,6 +36,8 @@ red=$'\e[31m'; green=$'\e[32m'; yellow=$'\e[33m'; reset=$'\e[0m'
 echo "🔎 Scanning Markdown links for absolute and over-up links..."
 
 violations=0
+
+TAIL_LINES="${TAIL_LINES:-20}"
 
 check_file () {
   local file="$1"
@@ -93,6 +101,57 @@ check_file () {
         violations=1
       fi
     fi
+  fi
+
+  # --------------------------------------------------------------------------
+  # Pattern D: Quick Links presence in all stage scrolls (1–10)
+  #   Require all three anchor phrases so learners never hit a dead end:
+  #     - "Curriculum Index"
+  #     - "Visual Tree Diagram"
+  #     - "Return to README"
+  #
+  #   Files covered:
+  #     - 001-sadhana.md
+  #     - 030-edu/002-kernel-tree.md .. 030-edu/008-sustainability-cows-fields.md
+  #     - 010-research/009-right-to-repair.md
+  #     - 010-technical-vision.md
+  # --------------------------------------------------------------------------
+  if [[ "$file" == "001-sadhana.md" \
+        || "$file" == 030-edu/002-* \
+        || "$file" == 030-edu/003-* \
+        || "$file" == 030-edu/004-* \
+        || "$file" == 030-edu/005-* \
+        || "$file" == 030-edu/006-* \
+        || "$file" == 030-edu/007-* \
+        || "$file" == 030-edu/008-* \
+        || "$file" == 010-research/009-right-to-repair.md \
+        || "$file" == 010-technical-vision.md ]]; then
+
+    if ! grep -q "Curriculum Index" "$file"; then
+      echo "${red}QUICK LINKS MISSING${reset} in $file"
+      echo "  Expected a link labeled 'Curriculum Index'."
+      echo
+      violations=1
+    fi
+    if ! grep -q "Visual Tree Diagram" "$file"; then
+      echo "${red}QUICK LINKS MISSING${reset} in $file"
+      echo "  Expected a link labeled 'Visual Tree Diagram'."
+      echo
+      violations=1
+    fi
+    if ! grep -q "Return to README" "$file"; then
+      echo "${red}QUICK LINKS MISSING${reset} in $file"
+      echo "  Expected a link labeled 'Return to README'."
+      echo
+      violations=1
+    fi
+  fi
+
+  # If violations detected for this file, show context
+  if [[ $violations -eq 1 ]]; then
+    echo "---- Context: tail of $file ----"
+    tail -n "$TAIL_LINES" "$file"
+    echo "--------------------------------"
   fi
 }
 

@@ -1,8 +1,8 @@
 # NixOS on EKS Nodes – Notes & Caveats
 
 > **Uddhava Gītā (SB 11.19.36)**  
-> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ*  
-> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ*  
+> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* [#SB-11.19.36a]  
+> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ* [#SB-11.19.36b]  
 > **Translation (ISKCON):** "Compassion, contentment, tolerance, peace, non-violence, truth and honesty are to be cultivated."
 
 Running **NixOS** as worker nodes on AWS EKS is possible but **not standard**.
@@ -24,5 +24,5 @@ Start with **Amazon Linux managed node groups**. Explore NixOS later.
 ---
 
 > **Uddhava Gītā (SB 11.7.41)**  
-> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ*  
+> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ* [#SB-11.7.41]  
 > **Translation (ISKCON):** "Saintly persons extend mercy to all living beings, seeing them as equal to themselves."

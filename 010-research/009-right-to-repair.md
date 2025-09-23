@@ -1,4 +1,10 @@
-# 001 – Right to Repair and Sustainable Design
+# Stage 9 – Right to Repair and Dharma 🔧
+
+This scroll is both technical and ethical.  
+It follows from **Stage 8**, where sustainability is described,  
+and prepares for **Stage 10**, the technical vision scroll.  
+
+> Repair is not merely fixing: it is dharma, an alignment with truth and care.  
 
 ## Introduction
 
@@ -57,7 +63,7 @@ The **Guardian Dragon** wants us to open, fix, and continue the story.
 When we build tools that last, we learn to be satisfied with what we already have — and we honor the Earth.
 
 ---
-### Next → Vision Deep-Dive 📜
+### Next → Stage 10: Technical Vision ✨
 **Read:** 010-technical-vision → [../010-technical-vision.md](../010-technical-vision.md)
 
 > From policy and practice, back into vision and architecture.

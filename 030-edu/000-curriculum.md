@@ -6,6 +6,12 @@
 📚 Curriculum Index: [000-curriculum.md](000-curriculum.md)
 
 
+📜 **See also:** [CURRICULUM-TREE.md](CURRICULUM-TREE.md)  
+For a **visual stage flow diagram** showing how all 10 stages link together  
+from sādhana → technical vision → funding.
+
+---
+
 This is a journey from story to system, from dragons to kernels, from compassion to code.  
 Each stage includes **reading, activity, reflection**.
 

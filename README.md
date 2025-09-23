@@ -2,9 +2,22 @@
 
 ### An Operating System for the Soul in the Digital Age
 
+[![Education Path](https://img.shields.io/badge/MantraOS-Curriculum-brightgreen?style=for-the-badge&logo=book)](030-edu/000-curriculum.md)
+[![Visual Tree](https://img.shields.io/badge/MantraOS-Tree%20Diagram-blueviolet?style=for-the-badge&logo=sitemap)](030-edu/CURRICULUM-TREE.md)
+
+---
+
 Hello, little ones. Come, sit. You see this device in my hand? It flickers and glows, much like the thoughts in our own minds. For a long time, these machines have been like hungry dragons, breathing fire and eating up the quiet forests of our attention, leaving behind a sad, smoky haze.
 
 But what if we could teach this dragon a new way? A gentler way? What if its fire could warm us without burning the world?
+
+---
+
+📚 **Want to walk the learning path right away?**  
+Jump into the **curriculum scrolls** here → [000-curriculum.md](030-edu/000-curriculum.md)  
+Or see the **visual tree diagram** here → [CURRICULUM-TREE.md](030-edu/CURRICULUM-TREE.md)
+
+---
 
 That is what MantraOS is. It is our attempt to raise a different kind of dragon. A dragon that remembers it is part of the forest, not its master.
 
@@ -128,6 +141,8 @@ We walk gently, with patience.
 - [030-edu/worksheets](030-edu/worksheets) – lessons & workbook.  
 - [030-edu/coloring-book](030-edu/coloring-book) – coloring prompts & companion guide.  
 - [030-edu/print-kit](030-edu/print-kit) – templates, PDF export, Docker + Makefile.  
+- `/030-edu/000-curriculum.md` - The step-by-step curriculum scroll.
+- `/030-edu/CURRICULUM-TREE.md` - A visual diagram of all 10 stages.
 - `REPOSITORY.md` - A lantern scroll mapping the repository's many rooms and their relationships.  
 
 ---
@@ -200,8 +215,8 @@ It is free, unlicensed, and belongs to everyone. May it be a seed of balance.
 ### A Prayer from the Uddhava Gītā
 
 > **SB 11.29.34**  
-> *sarva-bhūteṣu mad-bhāvo māṁ bhajantam īśvaram  
-> hitvānyathā-buddhiṁ yo māṁ veda sa mad-bhaktaḥ śreṣṭhaḥ*  
+> *sarva-bhūteṣu mad-bhāvo māṁ bhajantam īśvaram* [#SB-11.29.34a]  
+> *hitvānyathā-buddhiṁ yo māṁ veda sa mad-bhaktaḥ śreṣṭhaḥ* [#SB-11.29.34b]  
 >
 > "He who sees Me in all beings, worshiping Me and abandoning false conceptions,  
 > is the best devotee."
@@ -209,3 +224,10 @@ It is free, unlicensed, and belongs to everyone. May it be a seed of balance.
 May our dragons be guardians, not takers.  
 May our devices be companions, not masters.  
 May our work nourish the forest of life.
+
+---
+
+## 🔗 Quick Links
+
+* 📘 [Curriculum Index](030-edu/000-curriculum.md)  
+* 🌐 [Visual Tree Diagram](030-edu/CURRICULUM-TREE.md)

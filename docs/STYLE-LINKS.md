@@ -35,3 +35,11 @@ From `030-edu/000-curriculum.md` (one level deep), link to root:
 export LINK_AUDIT_IGNORE="docs/legacy/.*|README-old.md"
 
 *(Please remove ignores once fixed.)*
+
+### Context size in failures
+When the audit finds issues, it prints the **tail** of the offending file to help you fix quickly.
+You can tune how much context is shown:
+```bash
+TAIL_LINES=40 bash scripts/check-relative-links.sh
+```
+Default is 20 lines.

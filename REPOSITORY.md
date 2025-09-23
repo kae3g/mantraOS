@@ -6,8 +6,8 @@
 
 
 > **Uddhava Gītā (Śrīmad-Bhāgavatam 11.19.36)**  
-> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ*  
-> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ*  
+> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* [#SB-11.19.36]  
+> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ* [#SB-11.19.36b]  
 > **Translation (ISKCON):** "Compassion, contentment, tolerance, peace, non-violence, truth and honesty are to be cultivated."
 
 Welcome, dear reader. This scroll is like a **map of the dragon's library**, a way to wander through the many rooms of our repository without getting lost.  
@@ -106,5 +106,5 @@ The repository is a **living forest**, not a finished house. Branches will grow;
 ---
 
 > **Uddhava Gītā (Śrīmad-Bhāgavatam 11.7.41)**  
-> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ*  
+> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ* [#SB-11.7.41]  
 > **Translation (ISKCON):** "Saintly persons extend mercy to all living beings, seeing them as equal to themselves."

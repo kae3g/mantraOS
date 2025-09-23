@@ -1,8 +1,8 @@
 # ☁️ MantraOS Cloud Deploy – Reminders & Next Steps
 
 > **Uddhava Gītā (SB 11.19.36)**  
-> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ*  
-> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ*  
+> *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* [#SB-11.19.36a]  
+> *ahimsā satyam asteyam ity ādīnāṁ samāsataḥ* [#SB-11.19.36b]  
 > **Translation (ISKCON):** "Compassion, contentment, tolerance, peace, non-violence, truth and honesty are to be cultivated."
 
 This document is a **living checklist** for the MantraOS PBC admin and contributors working on the website deployment stack.
@@ -99,5 +99,5 @@ you may need to adjust the link-audit script or CI ignore list:
 ---
 
 > **Uddhava Gītā (SB 11.7.41)**  
-> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ*  
+> *ātmaupamyena bhūteṣu dayāṁ kurvanti sūrayaḥ* [#SB-11.7.41]  
 > **Translation (ISKCON):** "Saintly persons extend mercy to all living beings, seeing them as equal to themselves."

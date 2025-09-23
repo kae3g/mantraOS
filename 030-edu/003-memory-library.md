@@ -70,7 +70,7 @@ Respect the library, and it will always offer knowledge in peace.
 Memory holds both what we know and what we forget. Together, they make learning possible.
 
 ---
-### Next → Processes Orchestra 🎻
+### Next → Stage 4: Orchestra of Processes 🎻
 **Read:** 004-processes-orchestra → [004-processes-orchestra.md](004-processes-orchestra.md)
 
 > From memory to music — how the Guardian Dragon conducts.
