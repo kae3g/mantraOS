@@ -72,3 +72,23 @@ This runs on pushes/PRs and fails if any tracked text file has lines
   inside a blockquote or code fence to opt it out of wrapping.
 
 If you hit a tricky case, please open an issue so we can extend the wrapper.
+
+---
+
+## 🕊️ Historical Note
+
+In a past maintenance sweep, we normalized all references from "Bhagavad Gita"
+to **"Śrīmad-Bhāgavatam (Uddhava Gītā, Canto 11)"** to align the project's
+voice and scriptural focus. A temporary script (`scripts/purge-bhagavad-gita.sh`)
+was used once for this migration and then **deleted**. We don't keep a standing
+guard or purge job in CI for this; the repository now embeds explicit
+**Uddhava Gītā** verse anchors (see `docs/VERSE-INDEX.md`) and cites ISKCON
+translations directly. If future contributions introduce different scriptural
+sources, please discuss in an issue before broad changes, and update
+`docs/VERSE-INDEX.md` accordingly.
+
+> TL;DR: the purge tool is retired; our canonical citations live in
+> **SB Canto 11 (Uddhava Gītā)** with Romanized Sanskrit + translation and
+> searchable anchors.
+
+---

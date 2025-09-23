@@ -2,7 +2,7 @@
 # --------------------------------------
 # These are wrappers around our scripts so contributors can remember fewer commands.
 
-.PHONY: help verse-index links-check docs-check ci-all wrap-md check-80 purge-bhagavad
+.PHONY: help verse-index links-check docs-check ci-all wrap-md check-80
 
 help:
 	@echo "MantraOS Make targets:"
@@ -17,7 +17,6 @@ help:
 	@echo "80-column hard wrap:"
 	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe mode)"
 	@echo "  make check-80     - Report lines that exceed 80 chars (enforcer)"
-	@echo "  make purge-bhagavad - One-off cleanup: replace any lingering 'Bhagavad Gita' mentions"
 
 verse-index:
 	bash scripts/build-verse-index.sh
@@ -36,9 +35,6 @@ wrap-md:
 
 check-80:
 	bash scripts/enforce-80.sh
-
-purge-bhagavad:
-	APPLY=1 bash scripts/purge-bhagavad-gita.sh
 
 # ---------- Logo helpers ----------
 
