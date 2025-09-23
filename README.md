@@ -128,6 +128,7 @@ We walk gently, with patience.
 - [030-edu/worksheets](030-edu/worksheets) – lessons & workbook.  
 - [030-edu/coloring-book](030-edu/coloring-book) – coloring prompts & companion guide.  
 - [030-edu/print-kit](030-edu/print-kit) – templates, PDF export, Docker + Makefile.  
+- `REPOSITORY.md` - A lantern scroll mapping the repository's many rooms and their relationships.  
 
 ---
 
@@ -181,6 +182,11 @@ MantraOS demonstrates **sustainable, repairable, community-centered computing**:
 - Provides open educational resources for digital well-being.  
 
 ---
+
+🌼 If at any time the forest of scrolls feels wide and deep, you may open  
+the companion guide [`REPOSITORY.md`](REPOSITORY.md).  
+It is a lantern held high, showing how the rooms connect,  
+so that parents, students, and developers can all find their way.
 
 ## 🙏 Closing Words & Blessing
 

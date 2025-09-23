@@ -1,5 +1,9 @@
 # 🛠️ Contributing to MantraOS (Technical Guide)
 
+🔙 Return to the Dragon's Front Door: [README.md](README.md)  
+🔗 For non-technical companions: see [CONTRIBUTING.md](CONTRIBUTING.md)
+
+
 This document is for **technical contributors**: developers, designers, hardware engineers, and asset creators.  
 For a general community welcome, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 

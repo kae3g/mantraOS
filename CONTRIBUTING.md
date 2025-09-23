@@ -1,5 +1,9 @@
 # 🌱 Contributing to MantraOS
 
+🔙 Return to the Dragon's Front Door: [README.md](README.md)  
+🔗 For technical companions: see [CONTRIBUTING-tech.md](CONTRIBUTING-tech.md)
+
+
 Welcome, dear friend 🐉✨
 
 Whether you are a child, a parent, a teacher, a seeker, an artist, or a developer — there is space for you here.  
