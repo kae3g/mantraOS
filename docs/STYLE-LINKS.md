@@ -48,3 +48,7 @@ help you fix quickly. You can tune how much context is shown:
 TAIL_LINES=40 bash scripts/check-relative-links.sh
 ```
 Default is 20 lines.
+
+### Line length helpers
+- `make list-long` - Print top offenders (files/lines >80) to fix fast Use `vim
+- +{line} {file}` to open specific lines for editing

@@ -51,18 +51,16 @@ Reference docs under `docs/**` and `website/**` are excluded.
 
 ### 3) 80-Column Line-Length Enforcer
 - **Workflow:** `.github/workflows/line-length.yml` **Scripts:**
-- `scripts/wrap-markdown.py`, `scripts/enforce-80.sh` **What it enforces:**
-  - All tracked text/Markdown files keep **≤ 80 columns** Wrapper safely reflows
-  - paragraphs while preserving code fences, tables,
-lists, quotes, URLs, etc.
-- **Project exemptions:** verse blockquotes (`> …`), lines inside code fences,
-  table rows (contain `|`), and `docs/VERSE-INDEX.md` as it is link-dense by
-design. If a prose paragraph exceeds 80 chars, please wrap it using the wrapper
-(see `make wrap-md`).
+- `scripts/wrap-markdown.py`, `scripts/enforce-80.sh`,
+- `scripts/list-long-lines.sh` **What it enforces:**
+  - **All tracked files** must keep **≤ 80 columns** **For Markdown only:** code
+  - fences and table rows are exempt (never auto-wrap those)
+  - **Blockquotes/verses must wrap** like other prose
 - **Local run:**
   ```bash
   make wrap-md
   make check-80
+  make list-long
   ```
 
 ---

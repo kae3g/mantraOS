@@ -46,7 +46,7 @@ recyclable packaging.
 - dashboard that breathes softly with you. **Build 4:** A battery replacement
 - ritual—a rite of care, not consumption.
 
-> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam
+> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam*
 > asteyam ityādīnāṁ samāsataḥ*
 >
 > "Compassion toward all beings, satisfaction, tolerance, self-control,
