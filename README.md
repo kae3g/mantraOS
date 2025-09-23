@@ -263,5 +263,5 @@ masters. May our work nourish the forest of life.
 
 ## 🔗 Quick Links
 
-* 📘 [Curriculum Index](030-edu/000-curriculum.md) 🌐 [Visual Tree
-* Diagram](030-edu/CURRICULUM-TREE.md)
+* 📘 [Curriculum Index](030-edu/000-curriculum.md)
+* 🌐 [Visual Tree Diagram](030-edu/CURRICULUM-TREE.md)

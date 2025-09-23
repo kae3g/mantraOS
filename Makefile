@@ -1,32 +1,29 @@
 # MantraOS Developer Convenience Targets
 # --------------------------------------
 # These are wrappers around our scripts so contributors can remember fewer
-commands.
+# commands.
 
 .PHONY: help verse-index links-check docs-check ci-all wrap-md check-80
 
 help:
 	@echo "MantraOS Make targets:"
-	@echo "  make verse-index   - Rebuild docs/VERSE-INDEX.md from [#SB-11.*]
-	anchors"
-	@echo "  make links-check   - Audit relative links/ribbons in README + sadhana
-	+ 030-edu only"
-	@echo "  make docs-check    - Run all docs checks (links-check + verse-index
-	freshness)"
-	@echo "  make ci-all        - Run all repo docs guards locally (links, verse
-	index, wrap checks)"
+	@echo "  make verse-index   - Rebuild docs/VERSE-INDEX.md from [#SB-11.*] anchors"
+	@echo "  make links-check   - Audit relative links/ribbons in core docs"
+	@echo "                      (README, 001-sadhana.md, 030-edu/*)"
+	@echo "  make docs-check    - Run all docs checks"
+	@echo "                      (links-check + verse-index freshness)"
+	@echo "  make ci-all        - Run all repo docs guards locally"
+	@echo "                      (links, verse index, wrap checks)"
 	@echo ""
 	@echo "Tips:"
 	@echo "  TAIL_LINES=40 make links-check   # increase failure context in logs"
 	@echo ""
 	@echo "80-column hard wrap:"
-	@echo "  make wrap-md      - Wrap Markdown and text files to 80 columns (safe
-	mode, prose only)"
-	@echo "  make wrap-auto    - Smart auto-fix (md/sh/yaml/json); others are
-	reported only"
+	@echo "  make wrap-md      - Wrap Markdown to 80 (preserve code/table rows)"
+	@echo "  make wrap-auto    - Smart auto-fix (md/sh/yaml/json); report others"
 	@echo "  make wrap-fix     - Rewrite only violating files to <=80 (aggressive)"
-	@echo "  make check-80     - Report lines >80 (verses/code/tables are exempt)"
-	@echo "  make list-long    - Print top offenders (files/lines >80) to fix fast"
+	@echo "  make check-80     - Report lines >80 across all files"
+	@echo "  make list-long    - Print top offenders (files/lines >80)"
 
 verse-index:
 	bash scripts/build-verse-index.sh
@@ -35,8 +32,7 @@ links-check:
 	bash scripts/check-relative-links.sh
 
 docs-check: links-check verse-index
-	@git diff --quiet -- docs/VERSE-INDEX.md || (echo >&2 "docs/VERSE-INDEX.md
-	changed, please commit."; exit 1)
+	@git diff --quiet -- docs/VERSE-INDEX.md || (echo >&2 "VERSE-INDEX changed; commit it"; exit 1)
 
 ci-all: links-check verse-index
 	@echo "All docs checks completed (links + verse index)."
@@ -66,8 +62,7 @@ LOGO_TOOLS := assets/logo/tools/logo-pipeline.sh
 logo-rasterize:
 	@bash $(LOGO_TOOLS) rasterize
 
-## Vectorize all PNG drafts in assets/logo/drafts/incoming/ back to SVG and sort
-them
+## Vectorize all PNG drafts in assets/logo/drafts/incoming/ back to SVG and sort them
 logo-vectorize:
 	@bash $(LOGO_TOOLS) vectorize
 
@@ -97,8 +92,7 @@ logo-full: logo-vectorize
 
 .PHONY: logo-validate
 logo-validate:
-	@python assets/logo/tools/validate.py || (echo "Logo validation failed"; exit
-	1)
+	@python assets/logo/tools/validate.py || (echo "Logo validation failed"; exit 1)
 
 .PHONY: install-git-hooks
 install-git-hooks:
