@@ -14,13 +14,17 @@ red=$(printf '\033[31m'); yellow=$(printf '\033[33m'); reset=$(printf '\033[0m')
 
 fail=0
 
-# Target file set
+# Target file set (overridable via LINKS_FILES for tests)
 FILES=()
-while IFS= read -r p; do
-  FILES+=("$p")
-done < <(git ls-files | \
-grep -E '^(README\.md|001-sadhana\.md|030-edu/.*\.md)$' \
-| grep -Ev '^\.(git|github)/')
+if [[ -n "${LINKS_FILES:-}" ]]; then
+  for x in $LINKS_FILES; do FILES+=("$x"); done
+else
+  while IFS= read -r p; do
+    FILES+=("$p")
+  done < <(git ls-files | \
+  grep -E '^(README\.md|001-sadhana\.md|030-edu/.*\.md)$' \
+  | grep -Ev '^\.(git|github)/')
+fi
 
 # 1) Disallow absolute-root markdown links ](/foo.md) in target files only
 abs_hits=0
@@ -37,24 +41,33 @@ if [[ $abs_hits -ne 0 ]]; then fail=1; fi
 for f in 001-sadhana.md 030-edu/*.md; do
   [[ -f "$f" ]] || continue
   # Allow minor spacing variations around colon and emoji variations
-  if ! grep -Eq '🔙[[:space:]]+Return to the Dragon'\''s Front Door:[[:space:]]+\[(\.\./)?README\.md\]\((\.\./)?README\.md\)' "$f"; then
+  if ! grep -Eq '🔙[[:space:]]+Return to the Dragon'\''s Front Door:[[:space:]]+\[(\../)?README\.md\]\((\../)?README\.md\)' "$f"; then
     echo "${red}Missing nav ribbon in:${reset} $f"
     fail=1
   fi
 done
 
 # 3) Quick Links sanity in README (Curriculum + Tree present)
-if ! grep -Fq "## 🔗 Quick Links" README.md; then
-  echo "${red}Missing Quick Links header in README.md${reset}"
-  fail=1
+need_readme_checks=1
+if [[ -n "${LINKS_FILES:-}" ]]; then
+  case " ${LINKS_FILES} " in
+    *" README.md "*) need_readme_checks=1 ;;
+    *) need_readme_checks=0 ;;
+  esac
 fi
-if ! grep -Eq '\[Curriculum Index\]\(030-edu/000-curriculum\.md\)' README.md; then
-  echo "${red}Missing Curriculum Index link in README.md${reset}"
-  fail=1
-fi
-if ! grep -Eq '\[Visual Tree Diagram\]\(030-edu/CURRICULUM-TREE\.md\)' README.md; then
-  echo "${red}Missing Visual Tree Diagram link in README.md${reset}"
-  fail=1
+if [[ $need_readme_checks -eq 1 ]]; then
+  if ! grep -Fq "## 🔗 Quick Links" README.md; then
+    echo "${red}Missing Quick Links header in README.md${reset}"
+    fail=1
+  fi
+  if ! grep -Eq '\[Curriculum Index\]\(030-edu/000-curriculum\.md\)' README.md; then
+    echo "${red}Missing Curriculum Index link in README.md${reset}"
+    fail=1
+  fi
+  if ! grep -Eq '\[Visual Tree Diagram\]\(030-edu/CURRICULUM-TREE\.md\)' README.md; then
+    echo "${red}Missing Visual Tree Diagram link in README.md${reset}"
+    fail=1
+  fi
 fi
 
 if [[ $fail -ne 0 ]]; then

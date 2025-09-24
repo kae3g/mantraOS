@@ -54,8 +54,9 @@ that it nourishes, not poisons.
 
 ## Closing Mantra
 
-> **SB 11.7.43** *yathā taror mūla-niṣecanena tṛpyanti tat-skandha-bhujopaśākhāḥ
-> prāṇopahārāc ca yathendriyāṇāṁ tathaiva sarvārhaṇam acyutejyā*
+> **SB 11.7.43** *yathā taror mūla-niṣecanena tṛpyanti*
+> *tat-skandha-bhujopaśākhāḥ* prāṇopahārāc ca yathendriyāṇāṁ tathaiva
+> sarvārhaṇam acyutejyā*
 >
 > "As pouring water on the root nourishes the trunk, branches and leaves, and as
 feeding the stomach nourishes the senses, so worship of the Lord satisfies all."

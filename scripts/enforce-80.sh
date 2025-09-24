@@ -25,6 +25,15 @@ list_tracked() {
     | grep -Ev '\.(png|jpg|jpeg|gif|svg|pdf|zip|gz|tgz|bz2|xz|ico|mp3|mp4|webm|wav|mov)$'
 }
 
+# Allow tests to scope files: set LENGTH_FILES to space-separated list
+files_source() {
+  if [[ -n "${LENGTH_FILES:-}" ]]; then
+    tr ' ' '\n' <<<"$LENGTH_FILES"
+  else
+    list_tracked
+  fi
+}
+
 while read -r f; do
   [[ -f "$f" ]] || continue
   if [[ -n "$LENGTH_IGNORE" ]] && echo "$f" | grep -Eq "$LENGTH_IGNORE"; then
@@ -74,7 +83,7 @@ while read -r f; do
       fi
       ;;
   esac
-done < <(list_tracked)
+done < <(files_source)
 
 if [[ $viol -ne 0 ]]; then
   echo

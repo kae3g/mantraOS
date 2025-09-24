@@ -59,7 +59,7 @@ will always offer knowledge in peace.
 
 ## Closing Mantra
 
-> **SB 11.7.39** *jñānaṁ niṣṭhāṁ ca vijñānaṁ dhairyaṁ śauryaṁ balaṁ smṛtiḥ
+> **SB 11.7.39** *jñānaṁ niṣṭhāṁ ca vijñānaṁ dhairyaṁ śauryaṁ* *balaṁ smṛtiḥ*
 > satyaṁ śama-damaḥ śaucam etat saṁsiddhi-lakṣaṇam*
 >
 > "Knowledge, steadiness, wisdom, courage, strength, memory, truthfulness, and

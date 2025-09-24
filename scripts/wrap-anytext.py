@@ -120,9 +120,13 @@ def fix_markdown(p: Path) -> int:
     for line in raw:
         if code_fence_re.match(line):
             flush(); out.append(line.rstrip()); in_code = not in_code; continue
-        if in_code: out.append(line.rstrip()); continue
-        if table_div_re.match(line) or heading_re.match(line) or
-        hr_re.match(line):
+        if in_code:
+            out.append(line.rstrip()); continue
+        if (
+            table_div_re.match(line)
+            or heading_re.match(line)
+            or hr_re.match(line)
+        ):
             flush(); out.append(line.rstrip()); continue
         if not line.strip():
             flush(); out.append(""); continue
@@ -286,8 +290,8 @@ def main():
     if not APPLY:
         print("Dry-run complete. Set APPLY=1 to write changes.")
     else:
-        print(f"Modified files: {modified}. Reported (unfixed types):
-        {reported}.")
+        print("Modified files: %d. Reported (unfixed types): %d." % (modified,
+        reported))
 
 if __name__ == "__main__":
     main()

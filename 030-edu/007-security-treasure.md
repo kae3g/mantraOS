@@ -47,7 +47,7 @@ safe. Your data is your jewel. Guard it with dharma.
 
 ## Closing Mantra
 
-> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam
+> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* *ahiṁsā satyam*
 > asteyam ityādīnāṁ samāsataḥ*
 >
 > "Compassion toward all beings, satisfaction, tolerance, self-control,

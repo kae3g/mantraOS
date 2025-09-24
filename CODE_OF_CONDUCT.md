@@ -56,7 +56,7 @@ Always, our goal is **restoration, not punishment**.
 
 ## Blessing
 
-> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam
+> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* *ahiṁsā satyam*
 > asteyam ityādīnāṁ samāsataḥ*
 >
 > "Compassion, contentment, tolerance, peace, non-violence, truth, and honesty

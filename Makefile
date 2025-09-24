@@ -4,6 +4,7 @@
 # commands.
 
 .PHONY: help verse-index links-check docs-check ci-all wrap-md check-80
+.PHONY: test
 
 help:
 	@echo "MantraOS Make targets:"
@@ -38,7 +39,7 @@ ci-all: links-check verse-index
 	@echo "All docs checks completed (links + verse index)."
 
 wrap-md:
-	python3 scripts/wrap-markdown.py
+	APPLY=1 python3 scripts/wrap-markdown.py
 
 wrap-auto:
 	APPLY=1 python3 scripts/wrap-anytext.py
@@ -51,6 +52,21 @@ check-80:
 
 list-long:
 	bash scripts/list-long-lines.sh
+
+# ---------- Tests ----------
+
+test:
+	@echo "[tests] enforcing 80-col on synthetic fixtures..."
+	@echo "> blockquote long line *a* *b*" > tests_tmp.md
+	@LENGTH_FILES="tests_tmp.md" bash scripts/enforce-80.sh || true
+	@sed -E -i '' 's/\* a\* \*b/* a*\n> *b/' tests_tmp.md
+	@LENGTH_FILES="tests_tmp.md" bash scripts/enforce-80.sh
+	@rm -f tests_tmp.md
+	@echo "[tests] relative links scope override works..."
+	@echo "## 🔗 Quick Links\n* 📘 [Curriculum Index](030-edu/000-curriculum.md)\n* 🌐 [Visual Tree Diagram](030-edu/CURRICULUM-TREE.md)" > tests_links.md
+	@LINKS_FILES="tests_links.md" bash scripts/check-relative-links.sh
+	@rm -f tests_links.md
+	@echo "✅ tests passed"
 
 # ---------- Logo helpers ----------
 

@@ -6,7 +6,7 @@
 
 ## 🌸 Cover Blessing
 
-> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam
+> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* *ahiṁsā satyam*
 > asteyam ityādīnāṁ samāsataḥ*
 >
 > "Compassion, satisfaction, tolerance, self-control, nonviolence, truthfulness,

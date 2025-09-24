@@ -5,7 +5,7 @@ Map (lantern scroll): [../REPOSITORY.md](../REPOSITORY.md) 📚 Curriculum Index
 [000-curriculum.md](000-curriculum.md)
 
 
-> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ ahiṁsā satyam
+> **SB 11.19.36** *dayā bhūteṣu santuṣṭiḥ titikṣoparatiḥ śamaḥ* *ahiṁsā satyam*
 > asteyam ityādīnāṁ samāsataḥ*
 >
 > "Compassion toward all beings, satisfaction, tolerance, self-control,

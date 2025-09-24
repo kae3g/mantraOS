@@ -3,10 +3,6 @@
 ### An Operating System for the Soul in the Digital Age
 
 [![Education Path](
-https://img.shields.io/badge/MantraOS-Curriculum-brightgreen?style=for-the-badge&logo=book)](030-edu/000-curriculum.md)
-[![Visual Tree](
-https://img.shields.io/badge/MantraOS-Tree%20Diagram-blueviolet?style=for-the-badge&logo=sitemap)](030-edu/CURRICULUM-TREE.md)
-
 ---
 
 Hello, little ones. Come, sit. You see this device in my hand? It flickers and
@@ -263,5 +259,11 @@ masters. May our work nourish the forest of life.
 
 ## 🔗 Quick Links
 
-* 📘 [Curriculum Index](030-edu/000-curriculum.md)
-* 🌐 [Visual Tree Diagram](030-edu/CURRICULUM-TREE.md)
+* 📘 [Curriculum Index](030-edu/000-curriculum.md) 🌐 [Visual Tree
+* Diagram](030-edu/CURRICULUM-TREE.md)
+
+
+* 📘 [Curriculum Index](030-edu/000-curriculum.md) 🌐 [Visual Tree
+* Diagram](030-edu/CURRICULUM-TREE.md) 📘 [Curriculum
+* Index](030-edu/000-curriculum.md) 🌐 [Visual Tree
+* Diagram](030-edu/CURRICULUM-TREE.md)

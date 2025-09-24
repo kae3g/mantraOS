@@ -91,8 +91,11 @@ def wrap_md_lines(lines: list[str]) -> list[str]:
             flush(); out.append(line.rstrip()); in_code = not in_code; continue
         if in_code:
             out.append(line.rstrip()); continue
-        if table_div_re.match(line) or heading_re.match(line) or
-        hr_re.match(line):
+        if (
+            table_div_re.match(line)
+            or heading_re.match(line)
+            or hr_re.match(line)
+        ):
             flush(); out.append(line.rstrip()); continue
         if not line.strip():
             flush(); out.append(""); continue
